@@ -1,0 +1,80 @@
+.section-img {
+    width: 580px;
+    height: 100%;
+}
+  
+.vertical-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.vertical-flex.center-align {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fitness-need-img {
+    height: 110px;
+    margin-bottom: 16px;
+}
+
+.scale-text {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.scale-text-big {
+    font-size: 90px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.scale-separator {
+    width: 1px;
+    height: 100px;
+    background-color: #414141;
+}
+
+.card-img-120.feel-good {
+    height: 180px;
+}
+
+.text-bold {
+        font-weight: 700;
+}
+
+@media screen and (min-width: 1280px) {
+    .site-wrapper {
+        max-width: 1200px;
+        padding-right: 80px;
+        padding-left: 80px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .scale-separator {
+        width: 100px;
+        height: 1px;
+        margin-top: 32px;
+        margin-bottom: 32px
+    }
+    .map-wrapper-new {
+        -webkit-transform: scale(.45);
+        -ms-transform: scale(.45);
+        transform: scale(.45);
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%
+    }
+}

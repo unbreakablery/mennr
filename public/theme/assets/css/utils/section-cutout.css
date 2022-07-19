@@ -1,0 +1,421 @@
+/* Section cutout top right */
+.cutout-top-right {
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    background: white;
+}
+
+/* Section cutout top left */
+.cutout-top-left {
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
+
+/* Section cutout bottom right */
+.cutout-bottom-right {
+    clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+    background: white;
+}
+
+/* Section cutout bottom left */
+.cutout-bottom-left {
+    clip-path: polygon(0 100%, 100% 100%, 0 0);
+}
+
+.section-cutout {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+}
+
+.dark-mode .section-cutout {
+    background-color: #0f172a !important;
+}
+
+.section-cutout.cutout-top-right {
+    left: 0;
+    top: -1px;
+    right: 0;
+    bottom: auto;
+}
+
+.section-cutout.cutout-top-right.customer-bg-cutout {
+    background-image: url("../../img/svg/customer-salon-bg.svg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section-cutout.cutout-top-right.light-pink-bg {
+    background-color: #ffdcf9;
+}
+
+.section-cutout.cutout-top-right.light-green-bg {
+    background-color: #cbe6c0;
+}
+
+.section-cutout.cutout-top-right.mid-blue-bg {
+    background-color: #b6e6ff;
+}
+
+.section-cutout.cutout-top-right.pastel-pink-bg {
+    background-color: #f4d5de;
+}
+
+.section-cutout.cutout-top-right.customer-bg-cutout-blue {
+    background-color: #e5f8ff;
+    background-image: url("../../img/svg/customer-salon-bg.svg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section-cutout.cutout-top-right.sea-green {
+    background-color: #97d1aa;
+}
+
+.section-cutout.cutout-top-right.money-bg {
+    background-image: url("../../img/png/money-bg%20(1).png");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section-cutout.cutout-top-right.blue-bg {
+    background-color: #e5f8ff;
+}
+
+.section-cutout.cutout-top-right.wheat-yellow-bg {
+    background-color: #efd6b3;
+}
+
+.section-cutout.cutout-top-right.lemon-yellow-bg {
+    background-color: #fcf7d0;
+}
+
+.section-cutout.cutout-top-right.honeydew-green {
+    background-color: #cceed7;
+}
+
+.section-cutout.cutout-top-right.light-purple-bg {
+    background-color: #9486c7;
+}
+
+.section-cutout.cutout-top-right.pv-bg {
+    background-color: #e0d9f6;
+}
+
+.section-cutout.cutout-top-right._w-bg {
+    background-color: #fcddbc;
+}
+
+.section-cutout.cutout-top-right.light-orange-bg {
+    background-color: #f8e6e6;
+}
+
+.section-cutout.cutout-top-right.cyan-bg {
+    margin-bottom: 4px;
+    background-color: #d6f6f0;
+}
+
+.section-cutout.cutout-top-right.dark-yellow-bg {
+    background-color: #f2e5af;
+}
+
+.section-cutout.cutout-top-right.lighter-purple-bg {
+    background-color: #e5e8ff;
+}
+
+.section-cutout.cutout-top-right.lighter-purple-bg-ab {
+    background-color: #eeeffb;
+}
+
+.section-cutout.cutout-top-right.azure-bg {
+    background-color: #e5f8ff;
+}
+
+.section-cutout.cutout-top-right.gray-blue-bg {
+    background-color: #cce2e0;
+}
+
+.section-cutout.cutout-top-right.lighter-orange-bg {
+    background-color: #ffefe4;
+}
+
+.section-cutout.cutout-top-right.grey-bg {
+    background-color: #f4f4f4;
+}
+
+.section-cutout.cutout-top-right.pink-orange-bg {
+    background-color: #ffded9;
+}
+
+.section-cutout.cutout-top-right.lighter-purple-bg-2 {
+    background-color: #eff1ff;
+}
+
+.section-cutout.cutout-top-right.pastel-orange-bg {
+    background-color: #ffded9;
+}
+
+.section-cutout.cutout-top-right.orange-pink-bg {
+    background-color: #fef1f2;
+}
+
+.section-cutout.cutout-top-right.green-cyan-bg {
+    background-color: #4fa8a0;
+}
+
+.section-cutout.cutout-top-right.dark-purple-bg {
+    background-color: #70678f;
+}
+
+.section-cutout.cutout-top-right.ghost-white-bg-eeeffb {
+    background-color: #eeeffb;
+}
+
+.section-cutout.cutout-top-right.lavender-bg-f2eaff {
+    background-color: #f2eaff;
+}
+
+.section-cutout.cutout-top-right.deep-sky-blue-bg-00b6ed {
+    background-color: #1eb6ed;
+}
+
+.section-cutout.cutout-top-right.azure-bg-f0fcff {
+    background-color: #f0fcff;
+}
+
+.section-cutout.cutout-top-right.light-cyan-bg-c8e9e2 {
+    background-color: #c8e9e2;
+}
+
+.section-cutout.cutout-top-right.white-color {
+    color: #3fb9da;
+}
+
+.section-cutout.cutout-top-right.lavender2-bg-f1edff {
+    background-color: #f1edff;
+}
+
+.section-cutout.cutout-top-right.light-gray-bg {
+    background-color: #f7f7f7;
+}
+
+.section-cutout.cutout-top-right.dark-grey-bg {
+    background-color: #414141;
+}
+
+.section-cutout.cutout-bottom-right {
+    left: 0;
+    top: auto;
+    right: 0;
+    bottom: -1px;
+    background-color: #fff;
+}
+
+.section-cutout.cutout-bottom-right.footer-reverse {
+    background-color: #414141;
+    -webkit-transform: rotateX(0) rotateY(-180deg) rotateZ(0);
+    transform: rotateX(0) rotateY(-180deg) rotateZ(0);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.dark-mode .section-cutout.footer-reverse {
+    background-color: #0f172a;
+}
+
+.section-cutout.cutout-bottom-right.blue-bg {
+    background-color: #e5f8ff;
+}
+
+.section-cutout.cutout-bottom-right.money-bg {
+    background-image: url("../../img/png/money-bg%20(1).png");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section-cutout.cutout-bottom-right.light-pink-bg {
+    background-color: #ffdcf9;
+}
+
+.section-cutout.cutout-bottom-right.honeydew-green {
+    background-color: #bcd0bf;
+}
+
+.section-cutout.cutout-bottom-right.cyan-bg {
+    background-color: #d6f6f0;
+}
+
+.section-cutout.cutout-bottom-right.grey-bg {
+    background-color: #f5f5f5;
+}
+
+.section-cutout.cutout-bottom-right.khakhi-bg {
+    background-color: #ffe280;
+}
+
+.section-cutout.cutout-bottom-right.go-big-darkgreen {
+    display: none;
+    background-color: #1d784d;
+}
+
+.section-cutout.cutout-bottom-right.go-big-darkgreen.tab-light-green {
+    background-color: #83a850;
+}
+
+.section-cutout.cutout-bottom-right.bottom-right-pos {
+    bottom: 0;
+}
+
+.section-cutout.cutout-bottom-right.bottom-right-pos.go-big-light-grren {
+    display: none;
+    background-color: #58a27f;
+}
+
+.section-cutout.cutout-bottom-right.bottom-right-pos.go-big-light-grren.reversed {
+    left: 0;
+    top: -1px;
+    right: 0;
+    bottom: auto;
+    z-index: 10;
+    display: block;
+    background-color: #729268;
+    -webkit-transform: rotateX(0) rotateY(180deg) rotateZ(180deg);
+    transform: rotateX(0) rotateY(180deg) rotateZ(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.section-cutout.cutout-bottom-right.bottom-right-pos.go-big-light-grren.tab3-4 {
+    background-color: #83a850;
+}
+
+.section-cutout.cutout-bottom-right.light-orange-bg {
+    background-color: #ffefe4;
+}
+
+.section-cutout.cutout-bottom-right.pastel-orange-bg {
+    background-color: #ffded9;
+}
+
+.section-cutout.cutout-bottom-right.lighter-purple-bg-2 {
+    background-color: #eff1ff;
+}
+
+.section-cutout.cutout-bottom-right.light-gray-bg {
+    background-color: #f6f6f6;
+}
+
+.section-cutout.cutout-top-left {
+    left: 0;
+    top: -1px;
+    right: 0;
+    bottom: auto;
+}
+
+.section-cutout.cutout-top-left.light-green-bg {
+    background-color: #cbe6c0;
+}
+
+.section-cutout.cutout-top-left.gray-bg {
+    background-color: #d2d0dc;
+}
+
+.section-cutout.cutout-top-left.dark-blue-bg {
+    background-color: #00b6ed;
+}
+
+.section-cutout.cutout-top-left.grey-bg {
+    background-color: #f5f5f5;
+}
+
+.section-cutout.cutout-top-left.lighter-purple-bg-2 {
+    background-color: #eff1ff;
+}
+
+.section-cutout.cutout-top-left.cyan-bg {
+    background-color: #d6f6f0;
+}
+
+.section-cutout.cutout-top-left.white-color {
+    background-color: #f0f1f2;
+}
+
+.section-cutout.cutout-bottom-left {
+    left: 0;
+    top: auto;
+    right: 0;
+    bottom: -1px;
+    background-color: #fff;
+}
+
+.section-cutout.cutout-bottom-left.yellow-bg {
+    background-color: #ffe280;
+}
+
+.section-cutout.cutout-bottom-left.blue-bg {
+    background-color: #e5f8ff;
+}
+
+.section-cutout.cutout-bottom-left.honeydew-green {
+    background-color: #cceed7;
+}
+
+.section-cutout.cutout-bottom-left.white-color {
+    background-color: #f0f1f2;
+}
+
+.section-cutout.cutout-top-right.go-big-cream-gradient {
+    display: block;
+    background-color: transparent;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#b86b49),
+        to(#e1b385)
+    );
+    background-image: linear-gradient(90deg, #b86b49, #e1b385);
+}
+
+.section-cutout.cutout-top-right.go-big-gradient-green {
+    display: none;
+    background-color: transparent;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(#1d784d),
+        color-stop(0, #30865d),
+        color-stop(45%, #43936d),
+        to(#58a27f)
+    );
+    background-image: linear-gradient(
+        180deg,
+        #1d784d,
+        #30865d 0,
+        #43936d 45%,
+        #58a27f
+    );
+}
+
+@media screen and (min-width: 1440px) {
+    .section-cutout.cutout-bottom-right.bottom-right-pos.go-big-light-grren.reversed {
+        top: -1px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .section-cutout {
+        height: 50px;
+    }
+
+    .section-cutout.cutout-top-right.go-big-cream-gradient {
+        top: -1px;
+        display: block;
+    }
+}

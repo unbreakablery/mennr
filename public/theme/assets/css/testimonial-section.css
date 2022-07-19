@@ -1,0 +1,218 @@
+.ct-slide-section .carousel-inner {
+    padding-top: 36px;
+}
+
+.customer-testimonial-slide {
+    position: relative;
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 40px 60px 32px;
+    border-radius: 60px;
+    background-color: #fff;
+}
+
+.customer-testimonial-slide.wider {
+    max-width: 680px;
+}
+
+.testimonial-separator {
+    width: 80%;
+    height: 1px;
+    margin: 40px auto 20px;
+    background-color: hsla(0, 0%, 43.9%, 0.5);
+}
+
+.customer-testimonial-author-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 16px;
+    border-radius: 50%;
+}
+
+.ct-inverted-comma {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.ct-author-name {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.ct-author-designation {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.ct-author-logo {
+    max-height: 50px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: 0% 50%;
+    object-position: 0% 50%;
+}
+
+.ct-author-logo.everlash {
+    width: 140px;
+}
+
+.ct-author-logo.jonny-levi {
+    width: 156px;
+    margin-left: -9px;
+}
+
+.ct-author-logo.gene-juarez {
+    width: 136px;
+}
+
+.ct-author-logo.face-gym {
+    width: 40px;
+    margin-top: -10px;
+}
+
+.ct-author-logo.ckt {
+    width: 140px;
+}
+
+.ct-author-logo.andrewc {
+    width: 200px;
+}
+
+.ct-author-logo.orange-twist {
+    width: 116px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.ct-author-logo.orange-twist.contain {
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.ct-author-logo.miniluxe {
+    width: 116px;
+    margin-top: -8px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.ct-author-logo.birds-barber {
+    width: 72px;
+}
+
+.ct-author-logo.hair-cuttery {
+    width: 132px;
+    margin-top: -8px;
+    margin-left: -2px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.ct-author-logo.prose {
+    width: 80px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.ct-author-logo.inspa {
+    width: 72px;
+    margin-top: -8px;
+    margin-left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.ct-slide-nav {
+    position: absolute;
+    z-index: 2;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding-top: 10px;
+    height: 40px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transform: translate(0, 120%);
+    -ms-transform: translate(0, 120%);
+    transform: translate(0, 120%);
+}
+
+@media screen and (max-width: 767px) {
+    .ct-author-logo.ckt {
+        width: 100px;
+    }
+
+    .ct-author-logo.andrewc {
+        width: 160px;
+    }
+
+    .ct-author-logo.miniluxe,
+    .ct-author-logo.orange-twist {
+        width: 100px;
+    }
+
+    .ct-author-logo.birds-barber {
+        width: 60px;
+    }
+
+    .ct-author-logo.hair-cuttery {
+        width: 100px;
+    }
+
+    .ct-author-logo.prose {
+        width: 72px;
+    }
+
+    .ct-author-logo.inspa {
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .customer-testimonial-slide {
+        padding-right: 22px;
+        padding-bottom: 23px;
+        padding-left: 22px;
+        border-radius: 40px;
+    }
+
+    .testimonial-separator {
+        margin-top: 24px;
+    }
+
+    .customer-testimonial-author-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .ct-author-name {
+        font-size: 18px;
+    }
+
+    .ct-author-designation {
+        font-size: 14px;
+    }
+
+    .ct-author-logo.hair-cuttery {
+        width: 130px;
+    }
+}

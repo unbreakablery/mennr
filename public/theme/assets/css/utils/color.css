@@ -1,0 +1,153 @@
+.dark-mode .bg-primary {
+    background-color: #001321 !important;
+}
+
+.dark-mode .bg-secondary {
+    background-color: #082235 !important;
+}
+
+.bg-primary {
+    background-color: #e5f8ff !important;
+}
+
+.bg-secondary {
+    background-color: #d6f6f0 !important;
+}
+
+.blue-span {
+    color: #1eb6ed;
+}
+
+.red-span {
+    color: #e53a24;
+}
+
+.purple-bold-span {
+    color: #7464a5;
+    font-weight: 700;
+}
+
+.green-am-dyk-stat-span {
+    color: #179476;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.green-bold-span {
+    color: #179476;
+    font-weight: 700;
+}
+
+.aw-blue-span {
+    color: #3fb9da;
+}
+
+.aw-pink-span {
+    color: #ff568b;
+}
+
+.amazing-span {
+    color: #e53a24;
+}
+
+.orange-span {
+    color: #dd751c;
+}
+
+.blue-magenta-span {
+    color: #6f678e;
+}
+
+.purple-bg {
+    background-color: #645693;
+}
+
+.pink-bg {
+    background-color: #ce809d;
+}
+
+.green-bg-ddf3ef {
+    background-color: #ddf3ef;
+}
+
+.deep-sky-blue-bg-00b6ed {
+    background-color: #1eb6ed;
+    color: #fff;
+}
+
+.lavender2-bg-f1edff {
+    background-color: #f1edff;
+}
+
+.ghost-white-bg-eeeffb {
+    background-color: #eeeffb;
+}
+
+.pink-bg-ffefec {
+    background-color: #ffefec;
+}
+
+.white-smoke-f4f4f4 {
+    background-color: #f4f4f4;
+}
+
+.azure-bg-f0fcff {
+    background-color: #f0fcff;
+}
+
+.green-gradient-bg {
+    background-image: linear-gradient(45deg, #00b6ed, #33ad6a);
+}
+
+.blue-bg {
+    background-color: #e5f8ff;
+}
+
+.yellow-bg {
+    background-color: #ffe280;
+}
+
+.light-gray-bg {
+    background-color: #f7f7f7;
+}
+
+.light-pink-bg {
+    background-color: #ffdcf9;
+}
+
+.light-green-bg {
+    background-color: #cbe6c0;
+}
+
+.mid-blue-bg {
+    background-color: #b6e6ff;
+}
+
+.pastel-pink-bg {
+    background-color: #f4d5de;
+}
+
+.lemon-yellow-bg {
+    background-color: #fcf7d0;
+}
+
+.wheat-yellow-bg {
+    background-color: #efd6b3;
+}
+
+.light-purple-bg {
+    background-color: #9486c7;
+    color: #fff;
+}
+
+.dark-green-bg {
+    background-color: #2ead76;
+}
+
+.cornsilk-yellow-bg {
+    background-color: #fef0ca;
+}
+
+.honeydew-green {
+    background-color: #cceed7;
+}

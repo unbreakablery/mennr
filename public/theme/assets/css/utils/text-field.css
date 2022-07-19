@@ -1,0 +1,117 @@
+.text-field {
+    display: block;
+    width: 100%;
+    height: 38px;
+    margin-bottom: 0;
+    padding: 8px 12px;
+    border-style: none none solid;
+    border-width: 1px;
+    border-color: #000 #000 #fff;
+    background-color: hsla(0, 0%, 100%, 0);
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.42857143;
+    vertical-align: middle;
+    outline-style: none;
+}
+
+.text-field:focus,
+select:focus {
+    border-color: #3898ec;
+    outline: 0;
+}
+
+.text-field::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.text-field:-ms-input-placeholder {
+    color: #fff;
+}
+
+.text-field::-ms-input-placeholder {
+    color: #fff;
+}
+
+.text-field::placeholder {
+    color: #fff;
+}
+
+.text-field.dark-field.border-color {
+    border-bottom-color: #dadada;
+}
+
+.text-field.dark-field.border-font-color {
+    padding: 0;
+    border-bottom-color: #dadada;
+    color: #19191b;
+    font-weight: 600;
+}
+
+.text-field.dark-field {
+    border-bottom-color: #414141;
+    color: #414141;
+}
+
+.text-field.dark-field::-webkit-input-placeholder {
+    color: rgba(65, 65, 65, 0.6);
+}
+
+.text-field.dark-field:-ms-input-placeholder {
+    color: rgba(65, 65, 65, 0.6);
+}
+
+.text-field.dark-field::-ms-input-placeholder {
+    color: rgba(65, 65, 65, 0.6);
+}
+
+.text-field.dark-field::placeholder {
+    color: rgba(65, 65, 65, 0.6);
+}
+
+.text-field.select-field:focus {
+    color: #414141;
+}
+
+.text-field.select-field.text-field-go-big-form-bottom-sec {
+    color: hsla(0, 0%, 43.9%, 0.7);
+}
+
+.text-field.select-field.gobigv2-fields {
+    color: rgba(25, 25, 27, 0.52);
+}
+
+.text-field.text-field-go-big-hero-form {
+    color: hsla(0, 0%, 43.9%, 0.7);
+}
+
+.text-field.dark-text {
+    border-bottom-color: #dadada;
+    color: #414141;
+}
+
+.text-field.dark-text::-webkit-input-placeholder {
+    color: #19191b;
+}
+
+.text-field.dark-text:-ms-input-placeholder {
+    color: #19191b;
+}
+
+.text-field.dark-text::-ms-input-placeholder {
+    color: #19191b;
+}
+
+.text-field.dark-text::placeholder {
+    color: #19191b;
+}
+
+.text-field.full-width-input-field {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}

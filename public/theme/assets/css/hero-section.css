@@ -1,0 +1,67 @@
+/* //////////////////////////// */
+/* Hero section style Homepage */
+.hero-illustration {
+    width: auto;
+    height: auto;
+}
+
+.hero-illustration.zf-logo {
+    height: 410px;
+}
+
+.hero-illustration.gobig-new-banner-image {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-illustration.gobig-new-banner-image.desktop {
+    height: 100%;
+}
+
+.hero-illustration.gobig-new-banner-image.desktop.genly-hidden,
+.hero-illustration.gobig-new-banner-image.mobile,
+.hero-illustration.gobig-new-banner-image.mobile-landscape-mode,
+.hero-illustration.home.mobile {
+    display: none;
+}
+
+.hero-video-wrapper {
+    padding: 4px 4px 0;
+    border: 2px solid rgba(30, 181, 240, 0.2);
+    border-radius: 20px;
+}
+
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56%;
+}
+
+.resource-card-video-thumbnail {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 0% 50%;
+    object-position: 0% 50%;
+}
+
+.resource-card-video-thumbnail.case-study-img {
+    padding: 30px;
+    border-bottom: 1px solid hsla(0, 0%, 43.9%, 0.24);
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
+}
+
+@media screen and (max-width: 479px) {
+    .hero-video-container {
+        height: 175px;
+    }
+}

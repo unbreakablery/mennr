@@ -1,0 +1,202 @@
+/* //////////// */
+/* Navbar style */
+.navbar {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 12px 80px 12px;
+}
+
+.navbar .container-lg {
+    padding: 0;
+}
+
+.navbar-brand {
+    width: 120px;
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    order: -1;
+    position: relative;
+    float: left;
+    text-decoration: none;
+    color: #333;
+}
+
+.logo {
+    width: 100%;
+}
+
+.navbar-wrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+}
+
+.dark-mode .navbar-wrapper {
+    background-color: rgb(15 23 42/0.75);
+}
+
+.nav-link {
+    padding: 20px !important;
+}
+
+.nav-link,
+.nav-link:focus,
+.nav-link:hover {
+    color: #222;
+}
+
+.dark-mode .nav-link,
+.dark-mode .nav-link:focus,
+.dark-mode .navlink:hover {
+    color: #fff;
+}
+
+.dark-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+
+.dropdown-item {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-left: 2px solid rgba(151, 209, 170, 0);
+    border-radius: 0 4px 4px 0;
+    -webkit-transition: background-color 0.2s, border 0.2s;
+    transition: background-color 0.2s, border 0.2s;
+    font-weight: 600;
+}
+
+.dark-mode .dropdown-item {
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    border-left-color: #97d1aa;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto 0px auto auto;
+    width: 1em;
+    height: 1em;
+    content: "\e603";
+    border: none;
+    font-family: webflow-icons !important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    min-width: 170px;
+    padding: 8px;
+    background-color: #fff;
+}
+
+.navbar-toggler {
+    padding: 0px;
+    padding-left: 6px;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    border: none;
+    box-shadow: none;
+}
+
+.dark-mode #navbarSupportedContent {
+    background-color:transparent;
+}
+
+.dark-mode .dropdown-menu {
+    background-color:transparent;
+    backdrop-filter: blur(20px);
+}
+
+@media screen and (min-width: 992px) {
+    .dark-mode .dropdown-menu {
+        background-color: rgb(15 23 42);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .navbar {
+        max-width: 1120px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navbar {
+        padding: 0px;
+    }
+
+    .navbar .container-lg {
+        padding-top: 0px;
+    }
+
+    .navbar-wrapper {
+        background-color: transparent;
+        backdrop-filter: none;
+    }
+
+    #navbarSupportedContent {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        background-color: #fff;
+        box-shadow: 0 11px 20px 0 rgb(0 0 0 / 20%);
+    }
+
+    .dark-mode #navbarSupportedContent {
+        backdrop-filter: blur(20px);
+    }
+
+    .navbar .container-lg {
+        background-color: rgba(255, 255, 255, .6);
+        backdrop-filter: blur(20px);
+        padding: 12px 40px;
+    }
+
+    .dark-mode .navbar .container-lg {
+        background-color: rgb(15 23 42/0.75);
+    }
+
+    .dropdown-menu {
+        box-shadow: none;
+        padding: 0px 8px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-brand {
+        padding-left: 10px;
+    }
+
+    .navbar .container-lg {
+        padding: 16px 10px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .logo {
+        max-width: 100px;
+    }
+}

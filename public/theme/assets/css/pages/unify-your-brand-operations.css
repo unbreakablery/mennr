@@ -1,0 +1,116 @@
+.unify-covenience-card {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 24px 16px 16px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 32px
+}
+
+.unify-covenience-card.convenieince-pink-card {
+    overflow: hidden;
+    background-color: #f4d7e0
+}
+
+.unify-covenience-card.convenieince-blue-card {
+    overflow: hidden;
+    background-color: #c5e9ff
+}
+
+.unify-covenience-card.lighter-purple-bg {
+    background-color: #e4dcff
+}
+
+.unify-convenience-img {
+    height: 150px;
+    margin-bottom: 12px;
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.unify-metric-text {
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 1.1;
+    font-weight: 600
+}
+
+.metric-text-span {
+    font-size: 20px;
+    font-weight: 700
+}
+
+.metric-text-span.pink {
+    color: #fd576b
+}
+
+.metric-text-span.blue {
+    color: #737cd8
+}
+
+.metric-text-span.brown {
+    color: #c5576e
+}
+
+.metric-text-span.purple {
+    color: #7140da
+}
+
+.unify-metric-text.gray {
+    color: #7c7f94
+}
+
+.metric-span-big {
+    font-size: 40px;
+    font-weight: 700
+}
+
+.metric-span-big.color-1 {
+    color: #6b3923
+}
+
+.metric-span-big.color-2 {
+    color: #5f3d53
+}
+
+.metric-span-big.color-3 {
+    color: #25847b
+}
+
+.metric-span-big.color-4 {
+    color: #bf6e4b
+}
+
+.metric-span-big.color-5 {
+    color: #617280
+}
+
+.metric-span-big.color-pink {
+    color: #fd576b
+}
+
+.metric-span-big.color-blue {
+    color: #737cd8
+}
+
+.metric-span-big.color-brown {
+    color: #c5576e
+}
+
+.metric-span-big.color-purple {
+    color: #7140da
+}

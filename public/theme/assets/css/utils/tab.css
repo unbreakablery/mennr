@@ -1,0 +1,181 @@
+.nav-tabs .nav-link {
+    margin-bottom: 14px;
+    padding: 9px 24px !important;
+    border: 0;
+    border-bottom: 2px solid #e6e6e6;
+    background-color: transparent;
+    color: #cbcbcb !important;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.pw-tabs-content {
+    margin-top: 40px;
+}
+
+.nav-tabs .nav-link.active {
+    border-bottom: 4px solid #1eb6ed;
+    background-color: transparent;
+    color: #1eb6ed !important;
+}
+
+.pw-tab-heading {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.pw-tab-heading.gold {
+    color: #cca34b;
+}
+
+.pw-tab-heading.blue {
+    color: #1eb5f0;
+}
+
+.pw-tab-heading.pink {
+    color: #a04b72;
+}
+
+.pw-tab-heading.green {
+    color: #33ad6a;
+}
+
+.pw-tab-heading.brown {
+    color: #bf6e4b;
+}
+
+.pw-tab-heading.purple {
+    color: #453c70;
+}
+
+.pw-tab-heading.blue-green {
+    color: #25847b;
+}
+
+.pw-tab-heading.light-pink {
+    color: #ce809d;
+}
+
+.pw-tab-bullet-point {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 2px;
+    padding-left: 8px;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.pw-tab-point-bullet {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    margin-top: 5px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: #c86277;
+}
+
+.pw-tab-tags-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 36px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+._2-col-grid.pw-tab-grid > .pw-tab-tags-wrapper {
+    -ms-grid-row: span 1;
+    grid-row-start: span 1;
+    -ms-grid-row-span: 1;
+    grid-row-end: span 1;
+    -ms-grid-column: span 2;
+    grid-column-start: span 2;
+    -ms-grid-column-span: 2;
+    grid-column-end: span 2;
+    -ms-grid-column-align: center;
+    justify-self: center;
+}
+
+.pw-tab-tags-wrapper.center-bottom {
+    max-width: 870px;
+    margin-top: -40px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.pw-tab-tag {
+    display: -ms-grid;
+    display: grid;
+    margin-right: 12px;
+    margin-bottom: 16px;
+    padding: 10px 22px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 16px;
+    -ms-grid-columns: auto 1fr;
+    grid-template-columns: auto 1fr;
+    -ms-grid-rows: 32px;
+    grid-template-rows: 32px;
+    border: 0.5px solid #b2b2b2;
+    border-radius: 40px;
+    background-color: #eaeaea;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.pw-tab-tag.green {
+    border-color: #076113;
+    background-color: #d0efc6;
+}
+
+.pw-tab-tag.blue {
+    border-color: #85c1d4;
+    background-color: #ccf3ff;
+}
+
+.pw-tab-tag.pink {
+    border-color: #ffb5d5;
+    background-color: #ffded9;
+}
+
+.pw-tab-tag.yellow {
+    border-color: #deb100;
+    background-color: #fef0ca;
+}
+
+.pw-tab-tag.purple {
+    border-color: #dcaaf8;
+    background-color: #e8e4f8;
+}
+
+.pw-tab-tag.cyan {
+    border-color: #18a159;
+    background-color: #aeeee2;
+}
+
+.pw-tag-img {
+    height: 100%;
+}
+
+.pw-tabs-content {
+    margin-top: 40px;
+}

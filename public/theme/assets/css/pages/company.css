@@ -1,0 +1,394 @@
+.company-success-heading {
+  font-size: 36px;
+}
+
+.company-success-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  padding: 3px 16px 14px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 12px;
+  font-size: 75px;
+  line-height: 1;
+  font-weight: 300;
+  text-align: center;
+}
+
+.company-success-card.purple {
+  background-color: #c6cbff;
+  color: #454da5;
+}
+
+.company-success-card.yellow {
+  background-color: #ffe99d;
+  color: #6d5d27;
+}
+
+.company-success-card.green {
+  background-color: #a9e9f1;
+  color: #24737d;
+}
+
+.company-success-card.pink {
+  background-color: #a3d3f2;
+  color: #733345;
+}
+
+.company-success-card.blue {
+  background-color: #f4d5de;
+  color: #733345;
+}
+
+.company-success-text {
+  margin-top: 4px;
+  color: #414141;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.company-logo-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 13px 28px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.compay-social-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  padding-top: 8px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  grid-auto-columns: 1fr;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  border: 2px solid #00769c;
+  border-radius: 14px;
+}
+
+.compay-social-card.blue {
+  background-color: #00769c;
+}
+
+.compay-social-card.gray {
+  border-color: #565d65;
+  background-color: #565d65;
+}
+
+.compay-social-card.green {
+  border-color: #729268;
+  background-color: #729268;
+}
+
+.company-social-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  margin-bottom: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.company-social-icon {
+  width: 44px;
+  margin-right: 12px;
+}
+
+.company-social-content-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  padding: 12px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: #fff;
+}
+
+.company-social-img {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 8px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.team-img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.content-container.story-sticky-block {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 116px;
+}
+
+.story-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 40px;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.story-content-block {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 12px;
+  padding-left: 24px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  border-bottom: 2px solid #000;
+}
+
+.story-year {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.story-circle {
+  position: absolute;
+  left: 0;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #1eb6ed;
+  -webkit-transform: translate(-50%,50%);
+  -ms-transform: translate(-50%,50%);
+  transform: translate(-50%,50%);
+}
+
+.company-story-img {
+  max-height: 80px;
+  max-width: 120px
+}
+
+
+.map-wrapper-new {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 992px;
+  min-height: 600px;
+  margin-top: -58px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.map-bg {
+  position: absolute;
+  width: 992px;
+  max-width: none;
+}
+
+.map-pin-container {
+  position: absolute;
+}
+
+.map-pin-container.bellevue {
+  left: 178px;
+  top: 249px;
+  right: auto;
+  bottom: auto;
+}
+
+.map-pin-container.manchester {
+  left: 463px;
+  top: 203px;
+  right: auto;
+  bottom: auto;
+}
+
+.map-pin-container.dubai {
+  left: 612px;
+  top: 282px;
+  right: auto;
+  bottom: auto;
+}
+
+.map-pin-container.hyderabad {
+  left: 679px;
+  top: 304px;
+  right: auto;
+  bottom: auto;
+}
+
+.map-pin-container.kuala-lumpur {
+  left: auto;
+  top: 338px;
+  right: 232px;
+  bottom: auto;
+}
+
+.map-pin-container.jakarta {
+  left: auto;
+  top: 354px;
+  right: 228px;
+  bottom: auto;
+}
+
+.map-pin-container.manila {
+  left: auto;
+  top: 312px;
+  right: 184px;
+  bottom: auto;
+}
+
+.map-pin-container.brisbane {
+  left: auto;
+  top: auto;
+  right: 112px;
+  bottom: 151px;
+}
+
+.map-pin-container:hover .pointer_address {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  opacity: 1;
+  display: block;
+}
+
+.pointer_address {
+  position: absolute;
+  left: 35px;
+  z-index: 99;
+  width: 250px;
+  padding: 16px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 32px 0 rgba(0,0,0,.1);
+  opacity: 0;
+  text-align: left;
+  transform: translate3d(0px, 30px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  opacity: 0;
+  display: none;
+}
+
+.pointer_address.left {
+  left: -260px;
+}
+
+.location_name-2 {
+  color: #1eb6ed;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 767px) {
+  .content-container.story-sticky-block {
+    position: static;
+  }
+  .map-wrapper-new {
+    -webkit-transform: scale(.45);
+    -ms-transform: scale(.45);
+    transform: scale(.45);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .company-success-heading {
+    font-size: 40px
+  }
+}
+
