@@ -1,0 +1,52 @@
+
+/*---- signup form css start ----*/
+.success-container {
+  max-width: 900px;
+  margin: 30px auto;
+  border-radius: 30px;
+ background: #FDFEFF;
+  box-shadow: 0px 4px 56px 18px rgba(7, 75, 150, 0.03);
+  text-align: center;
+  padding: 50px 25px;
+
+}
+.success-container .success-icon {
+  text-align: center;
+  width: 110px;
+  margin: 30px auto;
+}
+.success-container .btn-primary {
+  padding-left: 1.5rem;
+ padding-right: 1.5rem;
+}
+
+.success-container h2 {
+  font-size: 44px;
+  color: #000;
+  font-weight: 700;
+}
+
+.success-container p {
+  font-size: 16px;
+  color: #656565;
+}
+.success-container .thanks-text {
+  font-size: 16px;
+  color: #000;
+}
+@media (max-width: 575px){ 
+  .success-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem
+  }
+  .success-container h2 {
+    font-size: 24px;
+  }
+  .success-container p,
+  .success-container .thanks-text {
+    font-size: 14px;
+  }
+  
+}
+/*---- signup form css end ----*/
+

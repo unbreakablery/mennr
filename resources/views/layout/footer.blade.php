@@ -1,371 +1,184 @@
+<!-- Footer start -->
+  <footer class="pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 mb-3 ft-logo-part">
+        <p class="col-md-3 mb-3 text-muted">
+          <a class="footer-brand" href="/">
+            <img src="{{ asset('/images/logo.png') }}" alt="Mennr" />
+          </a>
+        </p>
+        <p>Eos tota dicunt democritum no. Has natum gubergren ne.</p>
+        <ul class="social-nav mt-4 col-md-3 justify-content-start list-unstyled d-flex social-nav">
+          <li class="me-3"><a href="#"><img src="{{ asset('/images/linkedin.svg') }}" /></a></li>
+          <li class="me-3"><a href="#"><img src="{{ asset('/images/messenger.svg') }}" /></a></li>
+          <li class="me-3"><a href="#"><img src="{{ asset('/images/twitter.svg') }}" /></a></li>
+          <li class="me-3"><a href="#"><img src="{{ asset('/images/twoo.svg') }}" /></a></li>
+        </ul>
+      </div>
 
-      <div class="site-wrapper form-wrapper">
-        <div
-          id="carouselIndicators"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="testimonial-slide">
-                <img
-                  src="{{ asset('theme/assets/img/png/Homepage_Customer%20photos_%20Dominic%20Blake%20(Blushes)_V2.png') }}"
-                  loading="lazy"
-                  alt="Dominic Blake, Blushes Hair &amp; Beauty"
-                  class="testimonial-img"
-                />
-                <img
-                  src="{{ asset('theme/assets/img/svg/testiimonial-inverted-comma.svg') }}"
-                  loading="lazy"
-                  alt=""
-                  class="testimonial-inverted-comma"
-                />
-                <div class="body-medium fw-bold">Dominic Blake</div>
-                <div class="testimonial-person-designation">
-                  Managing Director, Blushes Hair &amp; Beauty
-                </div>
-                <h4 class="body-large footer-testimonial-text">
-                  50% increase in self-service booking.
-                </h4>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="testimonial-slide">
-                <img
-                  src="{{ asset('theme/assets/img/png/Homepage_Customer%20photos_%20%20Isabel%20Steward%20(Douglas%20J)_V2.png') }}"
-                  loading="lazy"
-                  alt="Isabel Steward, Douglas J Companies"
-                  class="testimonial-img"
-                />
-                <img
-                  src="{{ asset('theme/assets/img/svg/testiimonial-inverted-comma.svg') }}"
-                  loading="lazy"
-                  alt=""
-                  class="testimonial-inverted-comma"
-                />
-                <div class="body-medium fw-bold">Isabel Steward</div>
-                <div class="testimonial-person-designation">
-                  Director of Guest Service, Douglas J Companies
-                </div>
-                <h4 class="body-large footer-testimonial-text">
-                  500% increase in customers using digital forms prior to
-                  treatment.
-                </h4>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="testimonial-slide">
-                <img
-                  src="{{ asset('theme/assets/img/png/Homepage_Customer%20photos_%20Brendon%20Mann%20(Epic%20Hair)_V2.png') }}"
-                  loading="lazy"
-                  alt="Brendon Mann, Epic Hair Designs"
-                  class="testimonial-img"
-                />
-                <img
-                  src="{{ asset('theme/assets/img/svg/testiimonial-inverted-comma.svg') }}"
-                  loading="lazy"
-                  alt=""
-                  class="testimonial-inverted-comma"
-                />
-                <div class="body-medium fw-bold">Brendon Mann</div>
-                <div class="testimonial-person-designation">
-                  Director, Epic Hair Designs
-                </div>
-                <h4 class="body-large footer-testimonial-text">
-                  100% increase in direct mail results.
-                </h4>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-indicators slide-nav testimonial-indicators">
-            <div
-              class="active slider-dot"
-              data-bs-target="#carouselIndicators"
-              data-bs-slide-to="0"
-              data-bs-interval="6000"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></div>
-            <div
-              class="slider-dot"
-              data-bs-target="#carouselIndicators"
-              data-bs-slide-to="1"
-              data-bs-interval="6000"
-              aria-label="Slide 2"
-            ></div>
-            <div
-              class="slider-dot"
-              data-bs-target="#carouselIndicators"
-              data-bs-slide-to="2"
-              data-bs-interval="6000"
-              aria-label="Slide 3"
-            ></div>
-          </div>
-        </div>
-        <div class="form-column" id="message-display">
-          @foreach (['success', 'danger'] as $msg)
-                @if(session()->has($msg))
-                  <div id="flash-message" class="alert alert-{{ $msg }}" role="alert">
-                    {{ session($msg) }}
-                  </div>
-                @endif
-              @endforeach
-          <h2>See us in action</h2>
-          <div class="section-heading-subtext">
-            We’d love to demonstrate what we can do for you. Fill in this form
-            &amp; we’ll contact you within 24 hours to schedule your free demo.
-          </div>
-          <div id="on-page-demo-form" class="form-wrapper w-form">
-            <form action="{{ route('ContactMail') }}" id="wf-form-Request-a-Demo-Form" name="wf-form-Request-a-Demo-Form" data-name="Request a Demo Form" method="post" class="demo-form">
+      <div class="col-md-2 mb-3 ft-menu">
+        <h5 class="ft-title active">Company</h5>
+        <ul class="nav flex-column footer-nav ft-nav-open">
+          <li class="nav-item mb-2"><a href="{{ route('about') }}" class="nav-link p-0">About Us</a></li>
+          <li class="nav-item mb-2"><a href="{{ route('careers') }}" class="nav-link p-0">Careers</a></li>
+          <li class="nav-item mb-2"><a href="{{ route('solutions') }}" class="nav-link p-0 ">Blog</a></li>
+          <li class="nav-item mb-2"><a href="{{ route('pricing') }}" class="nav-link p-0">Pricing</a></li>
+        </ul>
+      </div>
 
-              @csrf
-              <div class="form-grid request-demo-form">
-                <input type="text" class="text-field w-node-_162a2838-d29e-138d-cee2-f914009350de-3216bfbb w-input" maxlength="256" name="First-Name" data-name="First Name" aria-label="First Name" placeholder="First Name*" id="First-Name-2" required=""/>
-                <input type="text" class="text-field w-node-_77887b02-c23c-2e5d-1a23-df0734c915f0-3216bfbb w-input" maxlength="256" name="Last-Name" data-name="Last Name" aria-label="Last Name" placeholder="Last Name*" id="Last-Name-2" required=""/>
-                <input type="email" class="text-field w-input" maxlength="256" name="Email-ID" data-name="Email ID" aria-label="Email" placeholder="Email*" id="nav-Email-ID-5" required=""/>
-                <input type="tel" class="text-field w-input" maxlength="256" name="Phone-Number" data-name="Phone Number" aria-label="Phone Number" placeholder="Phone Number*" id="nav-Phone-Number-5" required=""/>
-                <input type="text" class="text-field w-input" maxlength="256" name="Company-Name" data-name="Company Name" aria-label="Company Name" placeholder="Company Name*" id="Company-Name-6" required=""/>
-                <input type="number" class="text-field w-input" max="9999" maxlength="256" name="Number-of-Locations" data-name="Number of Locations" aria-label="Number of Locations" min="0" placeholder="No. of Locations*" id="Number-of-Locations-9" required=""/>
-                <select id="Business-Type-6" name="Business-Type" data-name="Business Type*" required="" aria-label="Business Type" class="text-field select-field w-select">
-                  <option value="">Business Type</option>
-                  <option value="Salon">Salon</option>
-                  <option value="Spa">Spa</option>
-                  <option value="Medical Spa">Medspa</option>
-                  <option value="Fitness">Fitness</option>
-                  <option value="Other">Other</option>
-                </select>
-                <select id="Number-of-Providers-3" name="Number-of-Providers-3" data-name="Number Of Providers 3" required="" aria-label="Number of Providers" class="text-field select-field w-select">
-                  <option value="">Number of Providers*</option>
-                  <option value="1">1 Provider</option>
-                  <option value="2-4">2-4 Providers</option>
-                  <option value="5-9">5-9 Providers</option>
-                  <option value="10-24">10-24 Providers</option>
-                  <option value="25-99">25-99 Providers</option>
-                  <option value="100-499">100-499 Providers</option>
-                  <option value="500+">500+ Providers</option>
-                  <option value="1000+">1000+ Providers</option>
-                </select>
-              </div>
-              <div class="w-embed">
-                <input type="hidden" name="lead_source" value="Website: Demo Request"/>
-                <input type="hidden" id="CountryPopupEbook" class="CountryPopupEbook" name="country" value=""/>
-                <input type="hidden" id="CityPopupEbook" class="CityPopupEbook" name="city" value="" />
-                <input type="hidden" id="StatePopupEbook" class="StatePopupEbook" name="state" value="" />
-                <input type="hidden" name="00N4100000C63rc" title="Business Region" id="bregionPopupEbook" class="bregionPopupEbook" value=""/>
-                <input type="hidden" name="00N4100000UznQt" id="00N4100000UznQt" title="Previous URL" value="" />
-                <input type="hidden" name="00N4100000BizyQ" id="lp_url" class="lp_url" title="Landing Page URL" value=""/>
-                <input type="hidden" id="gclid1" name="00N1K00000fbKmg" title="gclid" value=""/>
-              </div>
-              <input type="submit" value="Get A Free Demo" data-wait="Please wait..." class="button form-submit-btn"/>
-            </form>
-            <div class="success-message d-none p-3">
-              <div>Thank you! Your submission has been received!</div>
-            </div>
-            <div class="w-form-fail d-none mt-2 p-2">
-              <div>Oops! Something went wrong while submitting the form.</div>
-            </div>
-          </div>
+      <div class="col-md-3 mb-3 ft-menu">
+        <h5 class="ft-title">Solutions</h5>
+        <ul class="nav flex-column footer-nav">
+          <li class="nav-item mb-2"><a href="/solutions#schedule-appointment" class="nav-link p-0">Appointment</a></li>
+          <li class="nav-item mb-2"><a href="/solutions#point-sale" class="nav-link p-0">Billing Payment</a></li>
+          <li class="nav-item mb-2"><a href="/solutions#marketing" class="nav-link p-0">Marketing & Sales</a></li>
+          <li class="nav-item mb-2"><a href="/solutions#online-booking" class="nav-link p-0">Business Management</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3 ft-newsletter">
+        {!! Form::open(['route' => ['customer.newsletter'], 'id' => 'newsletter-submit']) !!}
+        <h5>Join Our Newsletter</h5>
+        <div class="d-flex flex-column flex-lg-row w-100 gap-2 gap-lg-0 ft-nl-form">
+          <label for="newsletter1" class="visually-hidden">Email address</label>
+          {{ Form::email('email', '', ['class' => 'form-control', 'id' => 'newsletter1', 'placeholder' => 'Your email address', 'required' => 'required']) }}
+          <button class="btn btn-primary" type="submit" id="subscribe-submit-btn">Subscribe</button>
         </div>
-      </div>
-      <div class="section-cutout cutout-bottom-right footer-reverse"></div>
-    </section>
-<!-- Footer section -->
-<section class="section footer-section">
-  <div class="site-wrapper">
-    <img
-      src="{{ asset('theme/assets/img/svg/footer-logo.svg') }}"
-      loading="lazy"
-      alt="Zenoti Logo in white - Salon, spa, medspa and fitness center Management Software"
-      class="footer-logo"
-    />
-    <div class="footer-grid">
-      <div class="footer-column">
-        <div class="footer-column-heading">Mennr</div>
-        <a href="/company/about-us" class="footer-link">About Us</a>
-        <a href="/careers" class="footer-link">Careers</a>
-        <a href="/customers" class="footer-link">Customers</a>
-        <a href="/contact-us" class="footer-link">Contact Us</a>
-        <a href="/company/support" class="footer-link">Support</a>
-        <a
-          href="#"
-          target="_blank"
-          class="footer-link"
-          >Help Center</a
-        >
-        <a href="/company/referral-program" class="footer-link"
-          >Referral Program</a
-        >
-      </div>
-      <div>
-        <div class="footer-column">
-          <div class="footer-column-heading">Why Mennr</div>
-          <a
-            href="/solutions/elevate-the-customer-experience"
-            class="footer-link"
-            >Elevate your customer experience</a
-          >
-          <a
-            href="/solutions/unify-your-brand-operations"
-            class="footer-link"
-            >Unify your brand and operations</a
-          >
-          <a href="/solutions/automate-with-ai" class="footer-link"
-            >Automate with AI</a
-          >
-        </div>
-      </div>
-      <div class="footer-column">
-        <div class="footer-column-heading">Products</div>
-        <a
-          href="/spa-salon-appointment-booking-software"
-          class="footer-link"
-          >Appointments &amp; Bookings</a
-        >
-        <a href="/spa-salon-point-of-sale-software" class="footer-link"
-          >Billing &amp; Payments</a
-        >
-        <a href="/spa-salon-reporting-analytics" class="footer-link"
-          >Business Intelligence</a
-        >
-        <a href="/business-management" class="footer-link"
-          >Business Management</a
-        >
-        <a href="/spa-salon-marketing-software" class="footer-link"
-          >Marketing &amp; Sales</a
-        >
-        <a href="/mobile-solutions" class="footer-link">Mobile Solutions</a>
-        <a
-          href="https://go.zenoti.com/zenoti-payments-na-device/"
-          target="_blank"
-          class="footer-link hid"
-          >Order Device</a
-        >
-      </div>
-      <div class="footer-column">
-        <div class="footer-column-heading">Resources</div>
-        <a href="/blogs" class="footer-link">Blogs</a>
-        <a href="/case-studies" class="footer-link">Case Studies</a>
-        <a href="/data-sheets" class="footer-link">Data Sheets</a>
-        <a href="/ebooks" class="footer-link">Ebooks</a>
-        <a href="/videos" class="footer-link">Videos</a>
-        <a
-          href="http://www.zenoti.com/blogs/zenoti-for-salons"
-          class="footer-link"
-          >Salon Management Guide</a
-        >
-      </div>
-      <div>
-        <div class="footer-column">
-          <div class="footer-column-heading">Solutions</div>
-          <a href="/salon-management-software" class="footer-link"
-            >Salons</a
-          >
-          <a href="/spa-management-software" class="footer-link">Spas</a>
-          <a href="/medical-spa-software" class="footer-link">Med Spas</a>
-          <a href="/fitness-center-management-software" class="footer-link"
-            >Fitness Centers</a
-          >
-        </div>
-        <div class="footer-column">
-          <div class="footer-column-heading">Media</div>
-          <a href="/press" class="footer-link">Press Releases</a>
-        </div>
+        @error('email')
+          <span class="text-danger">{{ $message }}</span>
+        @enderror
+        {{ Form::close() }}
+        <p class="mt-3 text-muted">* Will send you weekly updates for your better finance management.</p>
+        <p id="news-email-msg"></p>
       </div>
     </div>
-    <div class="footer-bottom-wrapper">
-      <div class="footer-bottom-left">
-        <a href="/privacy-notice" class="footer-bottom-link"
-          >Privacy Notice</a
-        >
-        <a href="/cookie-notice" class="footer-bottom-link"
-          >Cookie Notice</a
-        >
-        <a href="/legal" class="footer-bottom-link">Legal</a>
-        <a href="/security" class="footer-bottom-link">Security</a>
-        <a href="/returns-refunds" class="footer-bottom-link returns"
-          >Returns &amp; Refunds</a
-        >
-        <div class="footer-bottom-link">
-          All Content Copyright <span class="cr-year">2022</span>
-        </div>
-        <div class="footer-bottom-link no-border">All Rights Reserved</div>
-      </div>
-      <div class="footer-social-container">
-        <a
-          href="https://www.facebook.com/gozenoti"
-          target="_blank"
-          class="footer-social-link mw-100 d-inline-block"
-        >
-          <img
-            src="{{ asset('theme/assets/img/svg/facebook.svg') }}"
-            loading="lazy"
-            alt="Facebook Logo in white - Check out Zenoti&#x27;s Facebook page"
-          />
-        </a>
-        <a
-          href="https://twitter.com/gozenoti"
-          target="_blank"
-          class="footer-social-link mw-100 d-inline-block"
-        >
-          <img
-            src="{{ asset('theme/assets/img/svg/twitter.svg') }}"
-            loading="lazy"
-            alt="Twitter Logo in white - Check out Zenoti&#x27;s Twitter page"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/company/zenoti/"
-          target="_blank"
-          class="footer-social-link mw-100 d-inline-block"
-        >
-          <img
-            src="{{ asset('theme/assets/img/svg/linkedin-logo.svg') }}"
-            loading="lazy"
-            alt="LinkedIn Logo in white - Check out Zenoti&#x27;s LinkedIn page"
-          />
-        </a>
-        <a
-          href="https://www.instagram.com/gozenoti/?hl=en"
-          target="_blank"
-          class="footer-social-link mw-100 d-inline-block"
-        >
-          <img
-            src="{{ asset('theme/assets/img/svg/insta-logo.svg') }}"
-            loading="lazy"
-            alt="Instagram Logo in white - Check out Zenoti&#x27;s Instagram page"
-          />
-        </a>
-        <a
-          href="https://www.youtube.com/channel/UC02DL-XaONZdkyhU5-7N7TA"
-          target="_blank"
-          class="footer-social-link mw-100 d-inline-block"
-        >
-          <img
-            src="{{ asset('theme/assets/img/svg/youtube.svg') }}"
-            loading="lazy"
-            alt="YouTube Logo in white - Check out Zenoti&#x27;s YouTube channel"
-          />
-        </a>
-      </div>
+
+    <div class="text-center py-4 py-lg-5  mt-4 mt-lg-5 copyright-text border-top">
+      Copyright &copy; Mennr 2022. All Rights Reserved.
     </div>
   </div>
-</section>
-<div class="toggle">
-    <input id="theme-toggle" type="checkbox" />
-    <label for="theme-toggle" ></label>
-</form>
-<footer>
-  <!-- Template Main JS File -->
-  <!-- Boostrap JS file -->
-  <script src="{{ asset('theme/assets/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('theme/assets/js/main.js') }}"></script>
-  <script type="text/javascript">window.setTimeout("document.getElementById('flash-message').style.display='none';", 4000); </script>
-  <script type="text/javascript">window.setTimeout("document.getElementById('flash-message-subscription').style.display='none';", 4000); </script>
-
-  <script>
-    function handleButtonClick(e) {
-      var link = e.getAttribute('href');
-      window.location.assign(link);
-    }
-  </script>
 </footer>
+<!-- Footer end -->
+
+<!-- JS files ans script -->
+<script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('js/slick.min.js') }}"></script>
+<script type="text/javascript">
+  $('.review-slider').slick({
+    dots: false,
+    arrows: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
+  });
+
+  $(document).ready(function() {
+    $(window).on("resize", function(e) {
+      checkScreenSize();
+    });
+
+    checkScreenSize();
+
+    function checkScreenSize() {
+      var newWindowWidth = $(window).width();
+      if (newWindowWidth < 767) {
+        $('ul.dropdown-menu-mobile li').each(function() {
+          var dropdown = $('.dropdown-menu-btn').children();
+          $(this).on('click', function() {
+            $(this).children("a").addClass('active');
+            var menu = $(this).children("a");
+            var img = $(menu).children();
+            var text = $(menu).text();
+
+            $(dropdown[0]).attr('src', img.attr('src'));
+            $(dropdown[1]).text(text);
+          })
+        });
+
+        $('#solution-menu').on('click', function(e) {
+          e.preventDefault();
+          // window.location.href = '/solutions';
+        });
+      } else {
+        $('#solution-menu').on('click', function(e) {
+          e.preventDefault();
+          window.location.href = '/solutions';
+        });
+      }
+    }
+    
+    $('.arrow-up, .arrow-down').on('click', function(event) {
+      event.preventDefault();
+    });
+    
+    $('.we-do-card').each(function(index, element) {
+      $(this).on('click', function() {
+        var children = $(this).children();
+        var arrowChildren = $(children[0]).children();
+
+        $(children[1]).slideToggle('card-open');
+        $(arrowChildren[2]).toggleClass('arrow-up');
+      });
+    });
+
+    $('.ft-menu').each(function(index, element) {
+      $(this).on('click', function(event) {
+        var children = $(this).children();
+
+        $(children[1]).slideToggle('ft-nav-open');
+        $(children[0]).toggleClass('active');
+      });
+    });
+
+    function newsLetterMsg() {
+      $('#news-email-msg').show();
+      setTimeout(() => {
+        $('#news-email-msg').fadeOut();
+      }, 5000);
+      setTimeout(() => {
+        $('#news-email-msg').removeClass();
+      }, 7000);
+    }
+
+    /* Newsletter form submit ajax*/
+    $('#newsletter-submit').on('submit', function(e) {
+      e.preventDefault();
+
+      let email = $('#newsletter1').val();
+
+      $("#subscribe-submit-btn").text("Wait.....");
+
+      $.ajax({
+        url: "{{ route('customer.newsletter') }}",
+        type: "POST",
+        data: {
+          "_token": "{{ csrf_token() }}",
+          email: email,
+        },
+        success: function(response) {
+          $("#news-email-msg").addClass('text-success');
+          $("#news-email-msg").text(response.success);
+          $("#subscribe-submit-btn").text("Subscribe");
+          $('#newsletter1').val('');
+          newsLetterMsg();
+        },
+        error: function(response) {
+          $("#news-email-msg").addClass('text-danger');
+          $("#news-email-msg").text(response.responseJSON.errors.email);
+          $("#subscribe-submit-btn").text("Subscribe");
+          newsLetterMsg();
+        },
+      });
+    });
+  })
+</script>

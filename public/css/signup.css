@@ -1,0 +1,61 @@
+
+/*---- signup form css start ----*/
+.signup-container {
+  max-width: 620px;
+  margin: 0 auto;
+}
+.signup-container h1 {
+  font-size: 42px;
+  color: #074B96;
+  font-weight: 700;
+}
+.signup-container h2 {
+  font-size: 24px;
+  color: #000;
+  font-weight: 700;
+}
+.signup-container .form-control,
+.signup-container select,
+.signup-container textarea {
+  border: solid 1px #E4E4E4;
+  padding: 8px 10px;
+  font-size: 14px;
+  line-height: 2;
+}
+.signup-container .btn-primary {
+  height: 58px;
+  line-height: 57px;
+  font-size: 18px;
+  margin-top: 30px;
+}
+.signup-container .password-input {
+  position: relative;
+}
+.signup-container .password-input .form-control  {
+  padding-right: 50px;
+}
+
+.signup-container .password-input .eye-icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+}
+@media (max-width: 575px){ 
+  .signup-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem
+  }
+  .signup-container h1 {
+    font-size: 32px;
+  }
+  .signup-container h2 {
+    font-size: 20px;
+  }
+  .signup-container .btn-primary {
+    font-size: 16px;
+  }
+  
+}
+/*---- signup form css end ----*/
+

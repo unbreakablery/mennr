@@ -23,6 +23,13 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'company',
+        'location',
+        'mobile',
+        'user_level',
+        'locations_count',
+        'employees_count',
+        'business_type',
     ];
 
     /**
@@ -43,4 +50,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function setPasswordAttribute($value)
+    {
+        if ($value != "") {
+            $this->attributes['password'] = bcrypt($value);
+        }
+    }
+
+    public function currentPlan()
+    {
+        return $this->hasOne(UserPlan::class, 'user_id');
+    }
 }

@@ -7,11 +7,8 @@ use Illuminate\Support\Facades\Mail;
 
 class EmailController extends Controller
 {
-    
     public function Mail(Request $request){
-    
-     	
-    	$first_name		=	$request->get('First-Name'); 	
+    	$first_name		=	$request->get('First-Name');
     	$last_name		=	$request->get('Last-Name');
     	$email_id		=	$request->get('Email-ID');
     	$phone_no		=	$request->get('Phone-Number');

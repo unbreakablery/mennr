@@ -1,0 +1,241 @@
+/*---- Top About Banner Start ----*/
+.about-main .born-the-salon-main {
+  background-color: #074B96;
+  margin: 0 auto;
+  color: #fff;
+  background-image: url("../images/born-bg.png");
+  background-position: center;
+  background-size: 1200px;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+}
+.about-main .born-the-salon-main h1 {
+  font-size: 44px;
+  font-weight: 700;
+  margin: 40px 0;
+}
+.about-main .born-the-salon-main p {
+  font-size: 16px;
+  margin: 0 auto;
+  max-width: 590px;
+  text-align: center;
+}
+
+@media (max-width: 767px){ 
+  .about-main {
+    position: relative;
+  } 
+  .about-main .born-the-salon-main {
+    padding:40px 0 70px 0;
+  }
+.about-main .born-the-salon-main:after {
+  content: "";
+  margin: 0 auto;
+  background-image: url("../images/born-bg-mob.png");
+  background-position: right bottom;
+  background-size: 72px;
+  width: 72px;
+  height: 71px;
+  position: absolute;
+  right:15px;
+  bottom: 15px;
+  }
+  .about-main .born-the-salon-main h1 {
+    font-size: 30px;
+    margin: 15px 0 30px 0;
+  }
+
+  
+}
+@media (max-width: 575px){
+
+  .about-main .born-the-salon-main .container {
+    padding: 0 1.5rem;
+  }
+.about-main .born-the-salon-main h1 br {
+    display: none;
+  }
+
+    
+}
+/*---- Top About Banner End ----*/
+
+/*---- The Story of Mennr Start ----*/
+.story-of-mennr h2 {
+  font-weight: 700;
+  font-size: 36px;
+}
+.story-of-mennr p,
+.story-of-mennr p.blue-color {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.story-of-mennr p.blue-color {
+  color: #074B96;
+}
+
+@media (max-width: 575px) { 
+.story-of-mennr .container {
+  padding: 0 1.5rem 10px !important;
+}  
+.story-of-mennr h2 {
+  font-size: 24px;
+  margin: 35px 0 !important;
+}
+.story-of-mennr h2 br {
+  display: none;
+}
+.story-of-mennr p,
+.story-of-mennr p.blue-color {
+  font-size: 14px;
+}
+}
+/*---- The Story of Mennr End ----*/
+
+/*---- Our Mission Start ----*/
+.our-mission-main h2 {
+  font-weight: 700;
+  font-size: 36px;
+}
+.our-mission-main .our-mission-section-bg {
+  background-color: #074B9626;
+  padding: 70px 0;
+}
+.our-mission-content {
+  max-width: 800px;
+   margin: 0 auto;
+}
+.our-mission-content h3 {
+  font-weight: 700;
+  font-size: 42px;
+  color: #074B96;
+  margin-bottom: 60px;
+}
+.our-mission-content p {
+  font-size: 16px;
+  margin:20px 0 0 0;
+  text-align: center;
+}
+.our-mission-main a {
+  font-size: 14px;
+  text-decoration: none;
+}
+.our-mission-main .btn-outline-secondary {
+    height: 44px;
+    line-height: 43px;
+    padding: 0 15px;
+    border-color: #074B96;
+    color: #074B96;
+}
+.our-mission-main .btn-outline-secondary:hover,
+.our-mission-main .btn-outline-secondary:focus {
+  color: #fff;
+  background-color: #074B96!important;
+}
+
+@media (max-width: 991px) { 
+.our-mission-content h3 {
+  font-size: 38px;
+}
+}
+
+@media (max-width: 767px) { 
+.our-mission-content h3 {
+  font-size: 28px;
+}
+.our-mission-content p {
+  text-align: left;
+}
+.our-mission-main .btn-outline-secondary {
+  margin-top: 6px;
+}
+}
+@media (max-width: 575px) { 
+.our-mission-main h2 {
+  font-size: 26px;
+}
+.our-mission-main .container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.our-mission-content h3 {
+    font-size: 20px;
+    line-height: normal;
+    max-width: 303px;
+    margin: 0 auto 30px;
+}
+
+
+
+}
+/*---- Our Mission End ----*/
+
+/*---- What We Do Start ----*/
+.what-we-do-main {
+  background-color: #074B96;
+  padding: 50px 0;
+  border-radius: 0 0 400px 400px;
+  margin: 100px 0;
+}
+.what-we-do-main h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.what-we-do-main .what-we-do-img-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 460px;
+  margin: 0 auto;
+}
+.what-we-do-main .what-we-do-img-box .what-we-do-image {
+  display: flex;
+  margin: 0 15px 15px;
+  align-items: center;
+}
+.what-we-do-main .what-we-do-img-box .what-we-do-image img {
+  width: 90px;
+}
+.what-we-do-main .what-we-do-img-box .what-we-do-image .star-svg-img {
+  margin-left: 10px;
+} 
+
+
+@media (max-width: 767px) { 
+.what-we-do-main {
+  border-radius: 0;
+  margin:0;
+  padding: 30px 1.5rem;
+}
+}
+
+@media (max-width: 575px) {
+ .what-we-do-main .what-we-do-img-box .what-we-do-image {
+    margin: 0 0 15px;
+    flex-direction: column;
+    justify-content: center;
+ } 
+ .what-we-do-main .what-we-do-img-box .what-we-do-image .star-svg-img {
+    margin-left: 0;
+}
+.what-we-do-main h2 {
+  font-size: 24px;
+  line-height: 36px;
+  padding: 0;
+  max-width: 276px;
+  margin: 0 auto;
+}
+.what-we-do-main h2 br {
+  display: none;
+}
+.what-we-do-main .what-we-do-img-box .what-we-do-image:nth-child(2) {
+  order: 2;
+}
+.what-we-do-main .what-we-do-img-box .what-we-do-image:nth-child(4) {
+  order: 3;
+}
+.what-we-do-main .what-we-do-img-box {
+  margin:20px 0 0 !important;
+ }
+
+}
+/*---- What We Do End ----*/

@@ -54,7 +54,7 @@
                         <td><a href="#" class="text-primary fw-bold">{{ $loop->iteration }}</a></td>
                         <td class="adjust w-25">{{ $value->page_title }}</td>
                         <td class="adjust w-25">{{ $value->question }}</td>
-                        <td class="adjust w-50">{{ $value->answer }}</td>
+                        <td class="adjust w-50">{{ \Illuminate\Support\Str::limit(strip_tags($value->answer), 200, '...') }}</td>
                         <td>
                         	<div class="btn-group ms-2 ms-lg-3">
             					<a href="{{ route('faq.edit', $value->id) }}" type="button" class="btn btn-sm btn-outline-gray-600">Edit</a>

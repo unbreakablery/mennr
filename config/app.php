@@ -232,6 +232,16 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+
+        'PostHelper' => App\Helpers\PostHelper::class,
+        'TestimonialHelper' => App\Helpers\TestimonialHelper::class,
     ],
 
+    
+    'role_admin' => env('ROLE_ADMIN',1),
+    'role_customer' => env('ROLE_CUSTOMER',2),
+    'role_guest' => env('ROLE_GUEST',3),
+    'role_editor' => env('ROLE_EDITOR',4),
+
+    'support_emails' => env('SUPPORT_EMAILS', ['support@mennr.com']),
 ];

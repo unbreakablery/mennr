@@ -1,0 +1,124 @@
+
+/*---- payment form css start ----*/
+.payment-container {
+  max-width: 620px;
+  margin: 0 auto;
+}
+.payment-container h1 {
+  font-size: 42px;
+  color: #074B96;
+  font-weight: 700;
+}
+.payment-container h2 {
+  font-size: 24px;
+  color: #000;
+  font-weight: 700;
+}
+
+.payment-accordion-section {
+  max-width: 400px;
+  outline: none;
+}
+.payment-accordion-section .accordion-item {
+  margin-bottom: 15px;
+}
+.payment-accordion-section .accordion-flush, 
+.payment-accordion-section .accordion-item {
+  border-bottom: 0;
+  outline: none;
+}
+
+.payment-accordion-section .accordion-item button {
+  border: 1px solid #E4E4E4;
+  box-shadow: 0px 0px 0px rgba(75, 77, 237, 0.2);
+  border-radius: 4px !important;
+  height:72;
+}
+.payment-accordion-section .accordion-item button.pay-btn {
+  height: 54px;
+  border-radius: 10px!important;
+}
+.payment-accordion-section .accordion-item:focus,
+.payment-accordion-section .accordion-item:hover,
+.payment-accordion-section .accordion-item:focus-visible {
+  outline: none !important;
+}
+.payment-accordion-section .accordion-item button:focus,
+.payment-accordion-section .accordion-item button:hover,
+.payment-accordion-section .accordion-item button:focus-visible {
+  outline: none !important;
+}
+.payment-accordion-section .accordion-item h2:focus,
+.payment-accordion-section .accordion-item h2:hover,
+.payment-accordion-section .accordion-item h2:focus-visible {
+  outline: none !important;
+}
+.payment-accordion-section .accordion-item .accordion-body {
+  border-radius: 4px !important;
+  background-color: #FAF8FA;
+  border: solid 1px #E4E4E4;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  margin-top: -4px;
+}
+.payment-accordion-section .accordion-item .accordion-body form input {
+  font-size: 13px;
+  padding:12px;
+}
+.payment-accordion-section .accordion-item h2 {
+  color: #001524;
+  font-size: 16px;
+  font-weight: 400;
+}
+.payment-accordion-section .accordion-item .accordion-button:not(.collapsed) {
+  background-color: #FAF8FA;
+  color: #001524;
+  border-bottom: 0;
+
+}
+.payment-accordion-section .accordion-item .accordion-button:not(.collapsed):after {
+  filter: invert(0%) sepia(100%) saturate(100%) hue-rotate(360deg) brightness(0%) contrast(100%);
+}
+
+.payment-accordion-section .accordion-button.collapsed:after {
+  transform: rotate(-90deg);
+}
+.payment-accordion-section .accordion-item .card-box {
+  margin-left: 10px;
+}
+.payment-accordion-section .accordion-item .card-box img {
+  margin: 0 3px;
+  width: 36px;
+}
+
+/*.payment-accordion-section .accordion-item .accordion-button:after {
+  transform: rotate(-90deg);
+}*/
+
+
+@media (max-width: 575px){ 
+  .payment-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem
+  }
+  .payment-container h1 {
+    font-size: 32px;
+  }
+  .payment-container h2 {
+    font-size: 20px;
+  }
+  
+  
+}
+
+@media (max-width: 360px){
+.payment-accordion-section .accordion-item button {
+  font-size: 14px;
+} 
+ 
+  .payment-accordion-section .accordion-item .card-box img {
+    width: 26px;
+  }
+}
+/*---- payment form css end ----*/
+

@@ -1,0 +1,105 @@
+
+/*---- Pricing Plan css start ----*/
+.plan-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.plan-container h1 {
+  font-size: 42px;
+  color: #074B96;
+  font-weight: 700;
+}
+.plan-container h2 {
+  font-size: 24px;
+  color: #000;
+  font-weight: 700;
+}
+
+.plan-container .counting-badge {
+	display: inline-block;
+	background-color: #5CCED8;
+	color: #102432;
+	padding: 6px 20px;
+	border-radius: 5px;
+	font-weight: 400;
+	font-size: 13px;
+	text-align: center;
+	margin: 0 auto
+}
+.pricing-gray-box {
+	background-color: #FAF8FA;
+	border-radius: 10px;
+	border: solid 1px #E4E4E4;
+	padding: 40px 30px 30px 30px;
+}
+.pricing-gray-box .plan-list, .pricing-gray-box ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	min-height: 250px;
+}
+.pricing-gray-box .plan-list li, .pricing-gray-box ul li {
+	padding: 5px 0;
+	margin: 0;
+}
+.pricing-gray-box .btn-primary {
+	min-width: 180px;
+}
+.pricing-gray-box .plan-header h2 {
+    font-size: 20px;
+    color: #000;
+    font-weight: 700;
+    margin: 0;
+}
+.pricing-gray-box .plan-header h3 {
+    font-size: 32px;
+    color: #074B96;
+    font-weight: 700;
+    margin: 40px 0 15px 0;
+}
+.pricing-gray-box .plan-header h3 span {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@media (max-width: 991px){ 
+	.table-wrap-container {
+		flex-wrap: nowrap!important;
+		overflow: auto; 
+		padding-top: 1rem!important;
+		padding-bottom: 1rem!important;
+	}
+	.table-wrap-container .col-md-4 {
+		width: 350px;
+	}
+	.pricing-gray-box .btn-primary {
+		font-size: 15px;
+	}
+
+}
+
+
+@media (max-width: 575px){ 
+  .plan-container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem
+  }
+  .plan-container h1 {
+    font-size: 32px;
+  }
+  .plan-container h2 {
+    font-size: 20px;
+  }
+  .pricing-gray-box {
+  	padding: 25px 20px;
+  }
+  .table-wrap-container .col-md-4 {
+	width: 330px;
+	}
+	.pricing-gray-box .btn-primary {
+		font-size: 14px;
+	}
+  
+}
+/*---- Pricing Plan css end ----*/
+

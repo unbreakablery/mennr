@@ -72,4 +72,8 @@ class SubscriptionController extends Controller
             }
 
     }
+
+    public function checkout($plan_name, $plan_price) {
+        return view('pages/subscription/checkout', compact('plan_name', 'plan_price'));
+    }
 }

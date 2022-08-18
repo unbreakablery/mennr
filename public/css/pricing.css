@@ -1,0 +1,620 @@
+/*--- Inverse Header start ----*/
+header.inverse-header .navbar {
+ background-color: #074B96!important;
+ color: #fff;
+}
+
+@media (min-width: 992px){ 
+  header.inverse-header .mennr-nav .navbar .navbar-nav .nav-link {
+    color: #fff;
+  }
+  header.inverse-header  .mennr-nav .navbar .dropdown .dropdown-toggle:after {
+    border-color: #fff;
+  }
+  header.inverse-header .mennr-nav .navbar .btn-primary {
+    background-color: #fff;
+    color: #0047B9;
+  }
+  header.inverse-header .mennr-nav .navbar .btn.btn-link {
+    color: #fff;
+  }
+}
+@media (max-width: 991px){ 
+  header.inverse-header .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1.0%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+  }
+  header.inverse-header .nav-btn-group {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+/*--- Inverse Header end ----*/
+
+/*---- Top Pricing Banner Start ----*/
+.pricing-main {
+  background-color: #074B96;
+  margin: 0 auto;
+  color: #fff;
+  background-image: url("../images/pricing-banner-bg.png");
+  background-position: center;
+  background-size: 1200px;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  position: relative;
+}
+.pricing-main h1 {
+  font-size: 44px;
+  font-weight: 700;
+  margin: 0 0 40px 0;
+}
+.pricing-main p {
+  font-size: 16px;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+}
+.pricing-main h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+
+@media (max-width: 991px){ 
+  .pricing-main h1 br {
+    display: none;
+  }
+}
+@media (max-width: 767px){ 
+  .pricing-main {
+    padding:40px 0 70px 0;
+  }
+  .pricing-main:after {
+    content: "";
+    margin: 0 auto;
+    background-image: url("../images/born-bg-mob.png");
+    background-position: right bottom;
+    background-size: 72px;
+    width: 72px;
+    height: 71px;
+    position: absolute;
+    right:15px;
+    bottom: 15px;
+  }
+  .pricing-main h1 {
+    font-size: 30px;
+    margin: 15px 0 30px 0;
+  }
+  .pricing-main h2 {
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 575px){
+  .pricing-main .container {
+    padding: 0 1.5rem;
+  }
+  
+}
+/*---- Top Pricing Banner End ----*/
+
+
+/*---- Pricing compare start ----*/
+.price-compare-table h2 {
+  font-size: 44px;
+  font-weight: 700;
+}
+.price-compare-table .table-responsive {
+  overflow-x: visible;
+}
+.price-compare-table .pricing-table {
+  vertical-align: middle;
+  box-shadow: 0px 3.78483px 94.6207px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  background: #FFFFFF;
+  border: none;
+}
+.price-compare-table .pricing-table thead tr th {
+  vertical-align: middle;
+  padding: 25px;
+  text-align: center;
+  color: #5C5C5C;
+  font-size: 16px;
+  position: relative;
+}
+.price-compare-table .pricing-table thead tr th img {
+  max-height: 24px;
+  width: auto;
+}
+.price-compare-table .pricing-table thead tr th:first-child {
+  text-align: left;
+  font-size: 24px;
+  color: #001524;
+}
+.price-compare-table .pricing-table thead tr th:nth-child(2),
+.price-compare-table .pricing-table tbody tr td:nth-child(2) {
+  background: #074B96;
+}
+.price-compare-table .pricing-table thead tr th:nth-child(2):before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  background: #074B96;
+  width: 100%;
+  height: 20px;
+  border-radius: 20px 20px 0 0;
+}
+.price-compare-table .pricing-table tbody tr td:nth-child(2):before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  background: #074B96;
+  width: 100%;
+  height: 20px;
+  border-radius: 0 0 20px 20px;
+}
+.price-compare-table .pricing-table tr th,
+.price-compare-table .pricing-table tr td {
+  border: none;
+}
+.price-compare-table .pricing-table tbody tr td {
+  vertical-align: middle;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+}
+.price-compare-table .pricing-table tbody tr td:first-child {
+  text-align: left;
+  min-width: 350px;
+}
+.price-compare-table .pricing-table tbody tr:last-child td {
+  border-top: 2px solid #E1E1E1;
+  font-size: 20px;
+}
+.price-compare-table .pricing-table tbody tr:last-child td span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.price-compare-table .pricing-table tbody tr:last-child {
+  background: #FFF !important;
+}
+.price-compare-table .pricing-table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 20px;
+}
+.price-compare-table .pricing-table tbody tr:last-child td:last-child {
+  border-radius: 0 0 20px 0;
+}
+.price-compare-table .pricing-table tbody tr:last-child td:nth-child(2){
+  border-color: #074B96;
+  color: #fff;
+}
+.price-compare-table .pricing-table tbody tr td:first-child h3 {
+  font-size: 20px;
+  color: #000000;
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+.price-compare-table .pricing-table tbody tr td:first-child p {
+  font-size: 14px;
+  color: #000000;
+  margin: 0;
+}
+.price-compare-table .pricing-table tbody tr:nth-child(odd) {
+  background: rgba(10, 178, 204, 0.05);
+}
+.price-compare-table .pricing-table tbody tr:nth-child(even) {
+  background: #FFF;
+}
+
+
+@media (max-width: 1199px) {
+  .price-compare-table .pricing-table thead tr th,
+  .price-compare-table .pricing-table tbody tr td {
+    padding: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .price-compare-table .table-responsive {
+    overflow-x: auto;
+    padding: 20px 0;
+  }
+  .price-compare-table .pricing-table {
+    box-shadow: 0px 3px 20px rgb(0 0 0 / 5%);
+    border-radius: 0;
+  }
+  .price-compare-table .pricing-table thead tr th:first-child {
+    font-size: 20px;
+  }
+  .price-compare-table .pricing-table tbody tr td:first-child h3 {
+    font-size: 16px;
+    margin: 0;
+    line-height: normal;
+  }
+  .price-compare-table .pricing-table tbody tr td:first-child p {
+    font-size: 13px;
+  }
+  .price-compare-table .pricing-table thead tr th {
+    font-size: 14px;
+  }
+  .price-compare-table .pricing-table tbody tr:last-child td {
+    font-size: 16px;
+  }
+  .price-compare-table .pricing-table tbody tr:last-child td {
+    border-top: 1px solid #E1E1E1;
+  }
+  .price-compare-table .pricing-table tbody tr td img {
+    max-width: 24px;
+  }
+  .price-compare-table .pricing-table tbody tr td:first-child {
+    text-align: left;
+    min-width: 300px;
+  }
+  .price-compare-table .pricing-table thead tr th, .price-compare-table .pricing-table tbody tr td {
+    padding: 15px;
+  }
+  .price-compare-table .pricing-table thead tr th:nth-child(2):before {
+    border-radius: 10px 10px 0 0;
+  }
+  .price-compare-table .pricing-table tbody tr td:nth-child(2):before {
+    border-radius: 0 0 10px 10px;
+  }
+}
+@media (max-width: 767px) { 
+  .price-compare-table h2 {
+    font-size: 28px;
+    margin-bottom: 0!important;
+    padding-top: 0 !important;
+  }
+  .price-compare-table .pricing-table tbody tr td:first-child p {
+    font-size: 12px;
+  }
+  .price-compare-table .pricing-table tbody tr td:first-child {
+    min-width: 275px;
+  }
+  .price-compare-table .pricing-table tbody tr:last-child td span {
+    font-size: 14px;
+  }
+  .price-compare-table .pricing-table thead tr th, .price-compare-table .pricing-table tbody tr td {
+    padding: 12px;
+  }
+}
+
+
+/*---- Pricing compare end ----*/
+
+/* pricing table Start */
+.pricing-table-section h2 {
+  font-size: 44px;
+  font-weight: 700;
+}
+.pricing-table-section .pricing-table-box {
+  border-radius: 25px;
+  background-color: #fff;
+  box-shadow: 0px 3.78483px 94.6207px rgba(0, 0, 0, 0.06);
+  padding: 25px;
+}
+.pricing-table-section .plan-header {
+  text-align: center;
+}
+.pricing-table-section .plan-header h2 {
+  color: #074B96;
+  font-size: 13px;
+  font-weight: 700;
+}
+.pricing-table-section .plan-header h3 {
+  color: #000;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 30px 0 15px 0;
+  height: 57px;
+  overflow: hidden;
+}
+.pricing-table-section .plan-header h3 sub {
+  font-size: 14px;
+  font-weight: normal;
+}
+.pricing-table-section .plan-header h3 span {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+}
+.pricing-table-section .plan-header p {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 30px;
+  margin: 0;
+}
+.pricing-table-section .brd-btm {
+  border-bottom: 1px solid #9EA3B0;
+  margin: 26px 0;
+}
+.pricing-table-section div.plan-list ul,
+.pricing-table-section ul.plan-list {
+  margin: 0 0 0 40px;
+  padding: 0;
+  list-style: none;
+}
+.pricing-table-section div.plan-list li,
+.pricing-table-section ul.plan-list li {
+  margin: 15px 0;
+  padding: 0;
+  position: relative;
+  font-size: 13px;
+  color: #000;
+  font-weight: normal;
+}
+.pricing-table-section div.plan-list h2,
+.pricing-table-section ul.plan-list h2 {
+  font-weight: 700;
+  font-size: 14px;
+  margin-left: 40px;
+}
+.pricing-table-section div.plan-list li:before,
+.pricing-table-section ul.plan-list li:before {
+  content: "";
+  background-image: url(../images/pricing-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 11px;
+  background-position: left top;
+  width: 11px;
+  height: 7px;
+  position: absolute;
+  left:0;
+  top:6px;
+}
+.pricing-table-section div.plan-list li,
+.pricing-table-section ul.plan-list li span {
+  padding-left:18px;
+}
+.pricing-table-section .col-md-4 div.plan-list.coming-soon-list,
+.pricing-table-section .col-md-4 ul.plan-list.coming-soon-list {
+  height: 155px;
+}
+.pricing-table-section .col-md-4:last-child div.plan-list.coming-soon-list,
+.pricing-table-section .col-md-4:last-child ul.plan-list.coming-soon-list {
+  height: auto;
+}
+.pricing-table-section .pricing-table-box a.get-a-free-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 54px;
+  line-height: 54px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.With-Without-Mennr-btn {
+  display: none;
+}
+
+
+
+.active-pricing-table {
+ background-color: #074B96!important;
+ color: #fff!important;
+ transform: scale(1.06); 
+}
+.active-pricing-table h2,
+.active-pricing-table h3,
+.active-pricing-table p,
+.active-pricing-table div.plan-list li,
+.active-pricing-table ul.plan-list li {
+ color: #fff!important;
+}
+.active-pricing-table div.plan-list li:before,
+.active-pricing-table ul.plan-list li:before{
+ filter: brightness(0) invert(1);
+}
+.active-pricing-table  a.get-a-free-btn {
+  background-color: #fff!important;
+  color: #074B96!important;
+}
+
+
+@media (max-width: 991px) {
+  .pricing-table-section .container .row {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: scroll;
+    padding:60px 50px;
+  }
+  .pricing-table-section .container .row .col-md-4 {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .pricing-table-section {
+    padding:0 !important;
+  }  
+  .compare-right-part {
+    display: none;
+  }
+  .compare-right-part {
+    border-top: none;
+    padding-top: 0;
+  }  
+  .compare-left-part,
+  .compare-right-part  {
+    padding-bottom: 100px;
+  }
+  .pricing-table-section h2 {
+    font-size: 28px;
+    margin-bottom: 0!important;
+  }
+  .With-Without-Mennr-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .With-Without-Mennr-btn button.tabs-Mennr-btn {
+    margin: 0 5px;
+    box-shadow: none;
+  }
+  .With-Without-Mennr-btn button:hover,
+  .With-Without-Mennr-btn button:focus,
+  .With-Without-Mennr-btn button:active,
+  .With-Without-Mennr-btn button:focus-visible {
+    border:0;
+    outline: none;
+  }
+  .price-compare-main .mennr-logo-mobile {
+    text-align: center;
+  }
+
+  .pricing-table-section .container .row {
+    padding: 40px 0;
+  }
+  .pricing-table-section .container .row .col-md-4 {
+    min-width: 300px;
+  }
+  h2.mobile-Mennr-none {
+    display: none;
+  }
+  .pricing-table-section div.plan-list h2,
+  .pricing-table-section div.plan-list ul,
+  .pricing-table-section ul.plan-list {
+    margin: 0 0 0 10px;
+  }
+  .pricing-table-section .plan-header h2 {
+    font-size: 13px;
+  }
+  .pricing-table-section .plan-header h3 {
+    font-size: 30px;
+    min-height: 70px;
+  }
+  .pricing-table-section .plan-header h3 sub {
+    font-size: 18px;
+  }
+  .pricing-table-section .plan-header p {
+    font-size: 16px;
+  }
+  .pricing-table-section .pricing-table-box a.get-a-free-btn {
+    white-space: nowrap;
+  }
+  .compare-right-part .ps-5 {
+    padding-left: 0!important;
+  }
+  .compare-right-part .pt-5 {
+    padding-top:  2rem!important;
+  }
+  
+}
+@media (max-width: 575px){
+  .With-Without-Mennr-btn button.tabs-Mennr-btn {
+    white-space: nowrap;
+  }
+  .pricing-table-section .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+/* pricing table End */
+
+/* Faq Start */
+.faq-section {
+  margin: 100px 0;
+}
+.faq-section h2 {
+  font-weight: 700;
+  font-size: 44px;
+}
+.faq-section .faq-bg {
+  padding: 30px 0;
+  background-color: #E3E3E326;
+}
+.faq-section  .accordion-item {
+  border-bottom: solid 4px #E3E3E326;
+}
+.faq-section  .accordion-item button.accordion-button {
+  padding:15px 50px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: transparent;
+}
+.faq-section  .accordion-item .accordion-button:not(.collapsed) {
+  color: #000;
+  box-shadow: none;
+  background-color: #EEF6FF;
+}
+.faq-section .accordion-item .accordion-body {
+  padding:0 50px 15px 50px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.faq-section  .accordion-item .accordion-collapse.collapse.show {
+  background-color: #EEF6FF;
+}
+.faq-section .accordion-item button.accordion-button:focus {
+  box-shadow: none;
+}
+.faq-section .accordion-item button.accordion-button:after {
+  flex-shrink: 0;
+  width: 11px;
+  height: 11px;
+  margin-left: auto;
+  content: "";
+  background: #F3F5F6 url(../images/plus.png);
+  background-repeat: no-repeat;
+  background-size: 11px;
+  border-radius: 100%;
+  background-position: center;
+  transition: transform .2s ease-in-out;
+  padding: 10px;
+}
+.faq-section .accordion-item button.accordion-button:not(.collapsed)::after {
+ background: #000 url(../images/close.png);
+ background-repeat: no-repeat;
+ background-size: 11px;
+ border-radius: 100%;
+ background-position: center;
+}
+
+
+
+@media (max-width: 767px) {
+ .faq-section h2 {
+  font-size: 28px;
+} 
+.faq-section .faq-bg {
+  background-color: transparent;
+}
+.faq-section {
+  margin: 50px 0 0 0;
+}
+.faq-section .faq-bg {
+  margin: 0 1.5rem;
+}
+.faq-section .accordion-item button.accordion-button {
+  padding: 15px 1.5rem;
+  font-size: 16px;
+}
+.faq-section .accordion-item .accordion-button:not(.collapsed) {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.faq-section .accordion-item .accordion-collapse.collapse.show {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.faq-section .accordion-item .accordion-body {
+  padding:0 2.5rem 15px 1.5rem;
+  font-size: 14px;
+}
+.faq-section .accordion-item {
+  border-bottom: solid 4px #fff;
+  margin-bottom: 15px;
+  background-color: #FBFBFB;
+  border-radius: 10px;
+}
+
+}
+/* Faq End */
