@@ -1,4 +1,10 @@
-## CMS setup 
+## Mennr Project 
+
+### Specs & Features
+- Laravel v8 + MySQL/MariaDB
+- CMS - Content Management System
+- Blog
+- Pricing Plans
 
 Here is the steps to make local setup for this project
 

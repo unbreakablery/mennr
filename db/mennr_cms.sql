@@ -11,7 +11,7 @@
  Target Server Version : 80030
  File Encoding         : 65001
 
- Date: 05/08/2022 12:02:32
+ Date: 05/09/2022 08:25:34
 */
 
 SET NAMES utf8mb4;
@@ -44,18 +44,25 @@ COMMIT;
 DROP TABLE IF EXISTS `contact_saves`;
 CREATE TABLE `contact_saves` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `first_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `last_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `business_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `employees_count` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `business_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `query_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `message` longtext COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of contact_saves
 -- ----------------------------
 BEGIN;
+INSERT INTO `contact_saves` VALUES (1, 'Kai Akira', NULL, 'kai@mennr.com', NULL, NULL, NULL, NULL, NULL, 'Hi\r\nThis is test email.\r\nThanks', '2022-08-05 16:38:37', '2022-08-05 16:38:37');
 COMMIT;
 
 -- ----------------------------
@@ -114,7 +121,7 @@ CREATE TABLE `faqs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of faqs
@@ -128,6 +135,34 @@ INSERT INTO `faqs` VALUES (5, 'Marketing and Sales', 'What is a marketing softwa
 INSERT INTO `faqs` VALUES (6, 'Marketing and Sales', 'How can Zenoti marketing software be useful for salon owners?', '<p>Zenoti’s marketing software is a highly intuitive tool which deploys advanced data analytics to increase the sales of both goods and services. It analyzes every guest’s purchase history to ascertain their profile, spend patterns, and budget. Using these parameters, it gives salon staff a better understanding of guest requirements and helps them upsell both products and services. It prevents salons from indulging in blind marketing campaigns, saving both time and resources. Furthermore, targeted messaging tends to have better conversion rates than general campaigns, with increased revenue as a result.</p>', '2022-08-03 16:53:29', '2022-08-03 16:53:29');
 INSERT INTO `faqs` VALUES (7, 'Business Management', 'What is a business management software?', '<p>A business management software is a tool that is designed to assist salon and spa business owners to handle daily admin in an efficient way. The software helps streamline and simplify workflows by eliminating and automating repetitive tasks. Salon and spa management software handles guest information and conducts daily administrative tasks such as appointments, scheduling, raising invoices, <a href=\"https://www.mennr.com/billing-payments\">processing payments</a>, and recording customer feedback. With much of the back-end work being done by the salon/spa management software, the salon management team and staff can focus on delivering a <a href=\"https://www.zenoti.com/solutions/elevate-the-customer-experience\">superior guest experience</a> and increasing sales and revenue.</p>', '2022-08-03 17:43:10', '2022-08-03 17:43:10');
 INSERT INTO `faqs` VALUES (8, 'Business Management', 'What should you look for in a business management software application?', '<p>When it comes to evaluating a <a href=\"https://www.mennr.com/\">salon/spa business management software</a>, one must bear some key factors in mind. These are user-friendliness, process control, guest management, accessibility, data insights, storage and safety, customer support, and value for money. In order evaluate these factors it is important to understand how well the salon/spa management software aligns with the goals of your business. Deploying a salon business management software should maximize the efficiency of your operations, give you new ways to connect with guests, and improve your revenue.</p>', '2022-08-03 17:44:00', '2022-08-03 17:44:00');
+INSERT INTO `faqs` VALUES (9, 'pricing', 'How does the 14-day free trial work?', '<p>You can reach out to 200 people (prospects) in the 14 days, and access all the features in the Pro Plan.</p>', '2022-08-12 22:01:27', '2022-08-12 22:01:27');
+INSERT INTO `faqs` VALUES (10, 'pricing', 'What happens after my free trial ends?', '<p>Sit aperiam provident doloribus eius voluptate odio alias nisi explicabo asperiores impedit, sint illum accusantium laborum facilis.</p>', '2022-08-12 22:02:30', '2022-08-12 22:02:30');
+COMMIT;
+
+-- ----------------------------
+-- Table structure for free_demos
+-- ----------------------------
+DROP TABLE IF EXISTS `free_demos`;
+CREATE TABLE `free_demos` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `business_type` enum('private','public') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `employees` enum('0-49','50-99','100-500') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `business_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` enum('pending','canceled','accepted','rejected','completed') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'pending',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of free_demos
+-- ----------------------------
+BEGIN;
+INSERT INTO `free_demos` VALUES (2, 'Kai', 'Akira', 'kai@mennr.com', '16144524242', 'public', '50-99', 'Mennr', 'pending', '2022-08-13 18:09:28', '2022-08-13 18:09:28');
 COMMIT;
 
 -- ----------------------------
@@ -180,7 +215,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of migrations
@@ -210,6 +245,18 @@ INSERT INTO `migrations` VALUES (21, '2022_08_03_091346_add_new_columns_to_users
 INSERT INTO `migrations` VALUES (22, '2022_08_03_121727_add_email_column_to_admins_table', 4);
 INSERT INTO `migrations` VALUES (23, '2022_08_04_061609_create_newsletters_table', 4);
 INSERT INTO `migrations` VALUES (24, '2022_08_05_053032_add_user_level_columns_to_users_table', 4);
+INSERT INTO `migrations` VALUES (25, '2022_08_05_183919_create_pricing_table', 5);
+INSERT INTO `migrations` VALUES (26, '2022_08_05_184300_create_free_demos_table', 5);
+INSERT INTO `migrations` VALUES (27, '2022_08_05_180626_add_new_columns_to_contact_saves_table', 6);
+INSERT INTO `migrations` VALUES (28, '2022_08_05_183008_rename_name_to_first_name_in_contact_saves_table', 6);
+INSERT INTO `migrations` VALUES (29, '2022_08_08_064001_add_new_signup_columns_to_users_table', 6);
+INSERT INTO `migrations` VALUES (32, '2022_08_08_153156_rename_providers_to_employees_on_freedemos_table', 7);
+INSERT INTO `migrations` VALUES (33, '2022_08_09_121134_update_description_column_to_longtext_on_posts_table', 8);
+INSERT INTO `migrations` VALUES (34, '2022_08_11_182822_create_socialmedia_table', 9);
+INSERT INTO `migrations` VALUES (37, '2022_08_11_211703_create_plans_table', 10);
+INSERT INTO `migrations` VALUES (38, '2022_08_12_160220_update_columns_on_freedemo_table', 11);
+INSERT INTO `migrations` VALUES (39, '2022_08_13_085655_create_user_plans_table', 12);
+INSERT INTO `migrations` VALUES (40, '2022_08_17_195203_change_data_column_on_pages_table', 13);
 COMMIT;
 
 -- ----------------------------
@@ -240,11 +287,11 @@ CREATE TABLE `pages` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `page_title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `section_title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `data` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `data` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of pages
@@ -324,6 +371,16 @@ INSERT INTO `pages` VALUES (71, 'home', 'section_5_title', 'Our software works f
 INSERT INTO `pages` VALUES (72, 'home', 'section_5_description', '<h2><strong>Our team works with you.</strong></h2>', '2022-08-04 18:26:18', '2022-08-04 20:53:20');
 INSERT INTO `pages` VALUES (73, 'home', 'section_6_title', 'Our customers success stories', '2022-08-04 18:26:18', '2022-08-04 20:53:20');
 INSERT INTO `pages` VALUES (74, 'home', 'section_6_description', '<p>Mennr is tried, tested, and trusted by every type of brand including national chains, exclusive boutiques, nail studios, skin clinics, walk-in salons, resort spas and more…</p>', '2022-08-04 18:26:18', '2022-08-04 20:53:20');
+INSERT INTO `pages` VALUES (75, 'pricing', 'section_1_title', 'Everything you need to grow<br /> your Saas business', '2022-08-11 17:28:28', '2022-08-17 12:58:55');
+INSERT INTO `pages` VALUES (76, 'pricing', 'section_1_description', '<p>A complete toolkit for scaling your business at a fraction of the price of other tools</p>', '2022-08-11 17:28:28', '2022-08-17 12:58:55');
+INSERT INTO `pages` VALUES (83, 'about', 'section_1_title', 'About Mennr Software', '2022-08-17 18:32:39', '2022-08-17 19:17:59');
+INSERT INTO `pages` VALUES (84, 'about', 'section_1_description', '<h1 class=\"ql-align-center\">Born on the salon floor,<br/>bred to help you thrive.</h1><p class=\"ql-align-center\">With over 9,000 spas and salons as customers across the globe and growing, Phorest Salon Software is the system of choice for the forward-thinking salon owners.</p>', '2022-08-17 18:32:39', '2022-08-17 19:17:59');
+INSERT INTO `pages` VALUES (85, 'about', 'section_2_title', 'The Story of Mennr', '2022-08-17 18:32:39', '2022-08-17 19:17:59');
+INSERT INTO `pages` VALUES (86, 'about', 'section_2_description', '<p>Early 20 years ago, our founder and CEO, Ronan Perceval was working as a receptionist in a busy salon in Dublin, when he had a career-defining realisation. He had worked prior customer service jobs, but he soon discovered that nothing compared to the atmosphere of being in a salon.</p><p><span style=\"color: rgb(0, 71, 178);\">“I saw right away that–wow- a salon is a truly special place. There is this amazing energy flowing through it. People arrive looking forward to spending a few hours there, and by the time they are finished, they feel even better than when they came in. There is a total emotional transformation; they are glowing, confident. And this kind of positivity is absolutely contagious. I knew that I wanted to be a part of that forever.”</span></p><p>Ronan Perceval, Founder &amp; CEO of Mennr Software</p><p>At Mennr, we don’t have a job. We have a purpose. It’s to help salon, spa and clinic owners like you succeed. Not long after working the reception desk, Ronan noticed the owner was struggling with the same primary issues. Firstly, the salon was consistently dealing with at least one or two no-shows a week. Over time, this was adding up to a fairly significant loss in revenue. Ronan couldn’t let this go… He knew there had to be a better way.</p><p>Ronan enlisted the help of a friend, (Mennr’s co-founder, Luca Venezian0) who worked with him to write a bit of software that could send the salon clients a simple text message through the internet (which in those days was dial-up) to remind them of their upcoming appointments. Within a month, they were able to reduce no-shows by 70%.</p><p>But they didn’t stop there. The salon had another problem: getting clients back in, spending money after the Christmas rush had died down. So they came up with the idea to use the text message software they built to send their clients a message about a special offer for January, offering a free retail product with every appointment booked. Within days of the messages going out, they had filled up their books well into February. Other local salons began to take notice of this new style of promotion and began calling Ronan at his reception post asking where they could get access to it.</p>', '2022-08-17 18:34:30', '2022-08-17 19:17:59');
+INSERT INTO `pages` VALUES (87, 'about', 'section_3_title', 'Our Mission:', '2022-08-17 18:34:30', '2022-08-17 19:17:59');
+INSERT INTO `pages` VALUES (88, 'about', 'section_3_description', '<h3 class=\"ql-align-center\"><strong style=\"color: rgb(0, 71, 178);\">“ We empower and inspire salon, spa and clinic owners to grow fantastic businesses while attracting and delighting loyal clients and talented staff.”</strong></h3><p class=\"ql-align-center\">Mennr is more than just a technology company We are proud to be a life force for our industry. Our system helps businesses to manage, market and grow, not just through innovation in technology, but through mentoring, education and unrivalled support.</p><p class=\"ql-align-center\">Phorest believes in the human touch at the heart of the salon community. That’s why we’re the only salon software provider to connect every business with their own dedicated business advisor — a committed partner for helping salon owners achieve their dreams.</p>', '2022-08-17 18:34:30', '2022-08-17 19:17:59');
+INSERT INTO `pages` VALUES (89, 'about', 'section_4_title', 'We hate to brag but... <br/>people really like what we do', '2022-08-17 18:34:30', '2022-08-17 19:17:59');
+INSERT INTO `pages` VALUES (90, 'about', 'section_4_description', '<p><br></p>', '2022-08-17 18:34:30', '2022-08-17 19:17:59');
 COMMIT;
 
 -- ----------------------------
@@ -369,6 +426,31 @@ BEGIN;
 COMMIT;
 
 -- ----------------------------
+-- Table structure for plans
+-- ----------------------------
+DROP TABLE IF EXISTS `plans`;
+CREATE TABLE `plans` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `type` enum('monthly','yearly','custom') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'monthly',
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price` decimal(8,2) unsigned DEFAULT '0.00',
+  `features` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of plans
+-- ----------------------------
+BEGIN;
+INSERT INTO `plans` VALUES (1, 'monthly', 'PRO MONTHLY PLAN', '<p><strong>2,000 leads per month</strong></p>', 79.00, '<ul><li>Premium Integrations</li><li>3 Active Models</li><li>9 Months Lookback</li><li>Real-time Data Refresh</li><li>6hrs Data Refresh</li><li>12hrs Support SLA</li><li>Community Access</li><li>Dedicated CSM</li></ul>', '2022-08-12 19:49:39', '2022-08-17 13:37:05');
+INSERT INTO `plans` VALUES (2, 'yearly', 'PRO YEARLY PLAN', '<p><strong>2,000 leads per month</strong></p>', 999.00, '<ul><li>Premium Integrations</li><li>3 Active Models</li><li>9 Months Lookback</li><li>Real-time Data Refresh</li><li>6hrs Data Refresh</li><li>12hrs Support SLA</li><li>Community Access</li><li>Dedicated CSM</li></ul>', '2022-08-12 19:50:59', '2022-08-12 19:50:59');
+INSERT INTO `plans` VALUES (3, 'custom', 'ENTERPRISE MONTHLY PLAN', '<p><strong>Personalized pricing for unique needs</strong></p>', NULL, '<ul><li>Premium Integrations</li><li>3 Active Models</li><li>9 Months Lookback</li><li>Real-time Data Refresh</li><li>6hrs Data Refresh</li><li>12hrs Support SLA</li><li>Community Access</li><li>Dedicated CSM</li></ul>', '2022-08-12 19:51:32', '2022-08-12 19:52:59');
+COMMIT;
+
+-- ----------------------------
 -- Table structure for posts
 -- ----------------------------
 DROP TABLE IF EXISTS `posts`;
@@ -379,13 +461,13 @@ CREATE TABLE `posts` (
   `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `sub_title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tags` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `thumbnail` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=115 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=146 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of posts
@@ -480,10 +562,10 @@ INSERT INTO `posts` VALUES (86, 'Business Management', 'section_5', '33', NULL, 
 INSERT INTO `posts` VALUES (87, 'Business Management', 'section_5', '80', NULL, 'Business,Management', '<p><strong>80% </strong>Technology <strong>costs reduced</strong></p>', '03082022165955867242.png', NULL, '2022-08-03 20:31:12', '2022-08-03 20:31:12');
 INSERT INTO `posts` VALUES (88, 'Business Management', 'section_5', '100', NULL, 'Business,Management', '<p><strong>100% </strong>use of digital forms, improving<strong> front desk utilization </strong>by 50%</p>', '03082022165955869760.png', NULL, '2022-08-03 20:31:37', '2022-08-03 20:31:37');
 INSERT INTO `posts` VALUES (89, 'Business Management', 'section_6', 'Chief Executive Officers at the most successful brands in the beauty and wellness industry trust their operations and growth only to Zenoti', NULL, 'Business,Management,CEO', NULL, '03082022165955902354.png', NULL, '2022-08-03 20:37:03', '2022-08-03 20:37:03');
-INSERT INTO `posts` VALUES (90, 'solutions', 'section_1', 'Schedule Appointment', NULL, 'schedule,appointment', '<p>Simplify the appointment scheduling process of your business with a clean and simple tool. Custom-designed for your brand, the online booking feature is incorporated with a powerful calendar that allows customers to make and change appointments within the comfort of their own device.</p><figure class=\"image\"><img src=\"https://ckeditor.com/apps/ckfinder/userfiles/images/schedule-appointment.png\"></figure><h4><strong>24/7 booking:</strong></h4><p><strong>Allow customers to book online appointments through your website, Facebook page or mobile application. This premium feature has your reception open 24/7.</strong></p><h4><strong>Reminders:</strong></h4><p>Send automated text messages and email reminders to your clients.</p><h4><strong>Real-time business management:</strong></h4><p>The online booking system updates in real-time allowing your employees to view their upcoming schedule when they log-in.</p><h4><strong>Calendar:</strong></h4><p>The powerful calendar incorporates color coded scheduling making it easier for your staff to glance through various appointments.</p><h4><strong>Avoid overbooking:</strong></h4><p>Make overbooking is a thing of the past. The system seamlessly avoids any chance of overbooking giving your staff the chance to stay on time always.</p><h4><strong>Make it attractive:</strong></h4><p>Customized color, fonts and buttons to match your brand.</p>', NULL, NULL, '2022-08-04 16:08:52', '2022-08-04 16:08:52');
-INSERT INTO `posts` VALUES (91, 'solutions', 'section_2', 'Point of Sale', NULL, 'sale', '<p>Mennr has an integrated/built-in point-of-sale (POS) system that enables faster checkout for your salon and spa clients. You can now spend less time at checkout and more time with your clients. Check guests in, handle sales transactions, invoicing, receipts, retail product management and chair upgrades, all at the click of a button.</p><figure class=\"image\"><img src=\"https://ckeditor.com/apps/ckfinder/userfiles/images/point-sale-img.png\"></figure><h4><strong>Invoice &amp; Checkout</strong></h4><p>Unchain yourself from your front desk and process payments from your desktop or mobile device. Faster checkouts redefine how payments work thereby offering a number-convenient experience for your customers.</p><h4><strong>Gift card sales</strong></h4><p>Promote your business with customised or pre-designed gift cards. The integrated gift card sales tool can improve your bottom line.</p><h4><strong>Mixed mode payment</strong></h4><p>Complete transparency and predictability that enables easier accounting. Collect payments through various payment modes – cash, credit card, gift voucher, to make it simple for your customers.</p><h4><strong>Invoice notification</strong></h4><p>Go paperless! Send your automated invoices directly to your client\'s inbox or via text messages.</p><h4><strong>Centralized Prepaid</strong></h4><p>This means, a guest/customer can purchase prepaid cards at any branch of the outlet and subsequently redeem it at any of the branches. This upgrade will work for chain outlets as well as franchisees.</p>', NULL, NULL, '2022-08-04 16:21:31', '2022-08-04 16:21:31');
-INSERT INTO `posts` VALUES (92, 'solutions', 'section_3', 'Online Booking', NULL, 'online,booking', '<p>Promote your business efficiently and effectively with MioSalon. Integrate your salon and spa software to your website and social media pages to enable your clients to book, cancel or reschedule their appointment bookings anytime from anywhere.</p><figure class=\"image\"><img src=\"https://ckeditor.com/apps/ckfinder/userfiles/images/online-booking-img.png\"></figure><h4><strong>Add online booking to your website</strong></h4><p>The online booking widget for your website makes it easy and convenient for your guests to schedule appointments.</p><h4><strong>Facebook widget</strong></h4><p>Attract new clients by adding an online booking widget on your Facebook page. Clients are likely to take inspiration from your posts and book straight.</p><h4><strong>Integrated online payments</strong></h4><p>An integrated online payment gateway for bookings made on the website or through Facebook and Google.</p>', NULL, NULL, '2022-08-04 16:24:07', '2022-08-04 16:24:07');
-INSERT INTO `posts` VALUES (93, 'solutions', 'section_4', 'Marketing', NULL, 'marketing', '<p>Create targeted promotions and engage with new clients at the right time with the right offers. With simple and effective marketing strategies, put your salon business where customers are looking.</p><p><img src=\"https://ckeditor.com/apps/ckfinder/userfiles/images/marketing-img.png\"><br><strong>Personalised campaigns</strong></p><p>Use booking preference and appointment history to filter clients based on service, age, gender, visit and value.</p><h4><strong>SMS &amp; Email campaigns</strong></h4><p>Boost client engagement with SMS and email campaigns. Create targeted messages for your active and inactive clients.</p>', NULL, NULL, '2022-08-04 16:25:41', '2022-08-04 16:34:29');
+INSERT INTO `posts` VALUES (90, 'solutions', 'section_1', 'Schedule Appointment', NULL, 'schedule,appointment', '<p>Simplify the appointment scheduling process of your business with a clean and simple tool. Custom-designed for your brand, the online booking feature is incorporated with a powerful calendar that allows customers to make and change appointments within the comfort of their own device.</p><figure class=\"image\"><img src=\"http://local.mennr.com/upload/images/schedule-appointment.png\"></figure><h4><strong>24/7 booking:</strong></h4><p><strong>Allow customers to book online appointments through your website, Facebook page or mobile application. This premium feature has your reception open 24/7.</strong></p><h4><strong>Reminders:</strong></h4><p>Send automated text messages and email reminders to your clients.</p><h4><strong>Real-time business management:</strong></h4><p>The online booking system updates in real-time allowing your employees to view their upcoming schedule when they log-in.</p><h4><strong>Calendar:</strong></h4><p>The powerful calendar incorporates color coded scheduling making it easier for your staff to glance through various appointments.</p><h4><strong>Avoid overbooking:</strong></h4><p>Make overbooking is a thing of the past. The system seamlessly avoids any chance of overbooking giving your staff the chance to stay on time always.</p><h4><strong>Make it attractive:</strong></h4><p>Customized color, fonts and buttons to match your brand.</p>', NULL, NULL, '2022-08-04 16:08:52', '2022-08-08 20:11:16');
+INSERT INTO `posts` VALUES (91, 'solutions', 'section_2', 'Point of Sale', NULL, 'sale', '<p>Mennr has an integrated/built-in point-of-sale (POS) system that enables faster checkout for your salon and spa clients. You can now spend less time at checkout and more time with your clients. Check guests in, handle sales transactions, invoicing, receipts, retail product management and chair upgrades, all at the click of a button.</p><figure class=\"image\"><img src=\"http://local.mennr.com/upload/images/point-sale-img.png\"></figure><h4><strong>Invoice &amp; Checkout</strong></h4><p>Unchain yourself from your front desk and process payments from your desktop or mobile device. Faster checkouts redefine how payments work thereby offering a number-convenient experience for your customers.</p><h4><strong>Gift card sales</strong></h4><p>Promote your business with customised or pre-designed gift cards. The integrated gift card sales tool can improve your bottom line.</p><h4><strong>Mixed mode payment</strong></h4><p>Complete transparency and predictability that enables easier accounting. Collect payments through various payment modes – cash, credit card, gift voucher, to make it simple for your customers.</p><h4><strong>Invoice notification</strong></h4><p>Go paperless! Send your automated invoices directly to your client\'s inbox or via text messages.</p><h4><strong>Centralized Prepaid</strong></h4><p>This means, a guest/customer can purchase prepaid cards at any branch of the outlet and subsequently redeem it at any of the branches. This upgrade will work for chain outlets as well as franchisees.</p>', NULL, NULL, '2022-08-04 16:21:31', '2022-08-08 20:11:54');
+INSERT INTO `posts` VALUES (92, 'solutions', 'section_3', 'Online Booking', NULL, 'online,booking', '<p>Promote your business efficiently and effectively with MioSalon. Integrate your salon and spa software to your website and social media pages to enable your clients to book, cancel or reschedule their appointment bookings anytime from anywhere.</p><figure class=\"image\"><img src=\"http://local.mennr.com/upload/images/online-booking-img.png\"></figure><h4><strong>Add online booking to your website</strong></h4><p>The online booking widget for your website makes it easy and convenient for your guests to schedule appointments.</p><h4><strong>Facebook widget</strong></h4><p>Attract new clients by adding an online booking widget on your Facebook page. Clients are likely to take inspiration from your posts and book straight.</p><h4><strong>Integrated online payments</strong></h4><p>An integrated online payment gateway for bookings made on the website or through Facebook and Google.</p>', NULL, NULL, '2022-08-04 16:24:07', '2022-08-08 20:12:26');
+INSERT INTO `posts` VALUES (93, 'solutions', 'section_4', 'Marketing', NULL, 'marketing', '<p>Create targeted promotions and engage with new clients at the right time with the right offers. With simple and effective marketing strategies, put your salon business where customers are looking.</p><p><img src=\"http://local.mennr.com/upload/images/marketing-img.png\"><br><strong>Personalised campaigns</strong></p><p>Use booking preference and appointment history to filter clients based on service, age, gender, visit and value.</p><h4><strong>SMS &amp; Email campaigns</strong></h4><p>Boost client engagement with SMS and email campaigns. Create targeted messages for your active and inactive clients.</p>', NULL, NULL, '2022-08-04 16:25:41', '2022-08-08 20:12:53');
 INSERT INTO `posts` VALUES (94, 'home', 'section_1', 'The best salons, spas & medspas trust only Mennr.', NULL, 'salon', '<p>We\'re the best all-in-one, cloud-based software for big, growing, ambitious brands in beauty and wellness, we always focus on bringing out the best from business.</p>', '04082022165963820671.png', '04082022165963834296.png', '2022-08-04 18:36:46', '2022-08-04 18:39:02');
 INSERT INTO `posts` VALUES (95, 'home', 'section_2', 'Samsung', NULL, 'Samsung', NULL, '04082022165963877436.png', NULL, '2022-08-04 18:46:14', '2022-08-04 18:46:14');
 INSERT INTO `posts` VALUES (96, 'home', 'section_2', 'Oracle', NULL, 'Oracle', NULL, '04082022165963880489.png', NULL, '2022-08-04 18:46:44', '2022-08-04 18:46:44');
@@ -505,6 +587,73 @@ INSERT INTO `posts` VALUES (111, 'home', 'section_5', 'Invoice Generator', NULL,
 INSERT INTO `posts` VALUES (112, 'home', 'section_5', 'Auto Responder', NULL, 'Auto Responder', '<p>Eos tota dicunt democritum no. Has natum gubergren ne. Est viris soleat insolens eu nec.</p>', '04082022165964580472.svg', NULL, '2022-08-04 20:43:24', '2022-08-04 20:43:24');
 INSERT INTO `posts` VALUES (113, 'home', 'section_5', 'Social Plugins', 'Social Plugins', 'Social Plugins', '<p>Eos tota dicunt democritum no. Has natum gubergren ne. Est viris soleat insolens eu nec.</p>', '04082022165964583571.svg', NULL, '2022-08-04 20:43:55', '2022-08-04 20:43:55');
 INSERT INTO `posts` VALUES (114, 'home', 'section_5', 'Data Backup', NULL, 'Data Backup', '<p>Eos tota dicunt democritum no. Has natum gubergren ne. Est viris soleat insolens eu nec.</p>', '04082022165964585988.svg', NULL, '2022-08-04 20:44:19', '2022-08-04 20:44:19');
+INSERT INTO `posts` VALUES (115, 'solutions', 'section_5', 'Analytics & Reports', NULL, 'Analytics & Reports', '<p>Check how your business is tracking overall with individual reports and detailed insights on revenue, tax, campaigns and staff and sales performance. Maintain your entire business and client history in the cloud.</p><figure class=\"image\"><img src=\"http://local.mennr.com/upload/images/customize-reports.png\"></figure><h4>Dashboard</h4><p>Get an instant overview of how your business is doing at the click of a button. Also, keep track of client retention, referrals, staff productivity and sales benchmarks.</p><h4>Staff performance analysis</h4><p>Keep the wheels of your business running smoothly by generating staff performance reports, total hours booked, product sales and client retention rate for each team member.</p><h4>Customer 360 degree</h4><p>Enhance client relationships by getting valuable insights into customer activity. Pull reports on rebooking, no-shows, cancelled appointments and customer retention.</p><h4>Customer segmentation</h4><p>Segment clients on different parameters to get insights on active and inactive clients.</p>', NULL, NULL, '2022-08-08 20:30:40', '2022-08-08 20:32:27');
+INSERT INTO `posts` VALUES (116, 'solutions', 'section_6', 'Feedback System', NULL, 'Feedback System', '<p>The online reputation manager on MioSalon gives you complete control on how people treat, react and rate your business online. Get the real-time opinion of your clients before they rant on social media.</p><figure class=\"image\"><img src=\"http://local.mennr.com/upload/images/increase-online-reputation.png\"></figure><h4>Control negative feedback</h4><p>Monitor and control what’s being said about your business on Google, Facebook, TripAdvisor and Yelp.</p><h4>Enhanced reputation</h4><p>Gain more 5-star ratings through automated settings. Gets your salon to stand out from your competition online and improves your salon’s website ranking on Google.</p><h4>Feedback alerts</h4><p>Get notifications and alerts each time a negative rating is given.</p><h4>Feedback response</h4><p>Respond to negative and positive comments online from one clean and clear dashboard.</p><h4>Rating by SMS</h4><p>Send out text messages to clients after the service to collect dynamic ratings by SMS.</p><h4>Feedback at store</h4><p>Get clients to review your salon during checkout using salon software on your tablet.</p><h4>Feedback questionnaires</h4><p>Setup feedback questions on staff performance, appointment timeliness, quality of services and more.</p>', NULL, NULL, '2022-08-08 20:37:38', '2022-08-08 20:37:38');
+INSERT INTO `posts` VALUES (117, 'solutions', 'section_7', 'Repeat Clients', NULL, 'Repeat Clients', '<p>Add to your salon bottom line and guarantee future income by creating membership packages and rewarding loyal clients. This will ensure you get more business opportunities from them.</p><figure class=\"image\"><img src=\"http://local.mennr.com/upload/images/Repeat-Clients.png\"></figure><h4>Run a membership program</h4><p>For consistent repeat business and steady revenue flow, create membership programs to meet your client’s needs. Keep them coming back running special and exclusive offers only for members.</p><h4>Gift vouchers</h4><p>Sell gift cards and vouchers in-store and online. Give your clients the opportunity to pick-up the perfect last-minute gift for their friends, and near and dear ones.</p><h4>Prepaid and Credit management</h4><p>The CRM module displays the collected and pending payments against each customer. Bring more transparency in your business by managing finances within a few clicks.</p><h4>Reward points</h4><p>Turn your clients into loyal customers by implementing a loyalty point program. Reward clients for referrals, pre-booked appointments and retail purchases. While your customers will feel rewarded, your business will grow.</p><h4>Packages</h4><p>Bundle multiple services and sell as a package to loyal customers. Entice customers to make a one-time payment.</p><h4>Send personalised offers</h4><p>Personalised offers and packages for clients based on their history.</p>', NULL, NULL, '2022-08-08 20:38:38', '2022-08-08 20:38:38');
+INSERT INTO `posts` VALUES (118, 'solutions', 'section_8', 'Book Keeping', NULL, 'Book Keeping', '<p>Ensure that your team and your business are on the same page by managing all the aspects vital to your business from one location.</p><figure class=\"image\"><img src=\"http://local.mennr.com/upload/images/book-keeping.png\"></figure><h4>Product inventory management</h4><p>Get notified when you’re low on product and stock. Manage product usage, expiry and purchase orders with simplified inventory management tools.</p><h4>Employee management</h4><p>Get all the details about your employees and their performance with a single click. Analyse their productivity and give them incentives.</p><h4>Client management</h4><p>Get instant access to client demographics, past service history, stylist preferences and more. Keep track of past purchases and appointment history to personalise every client’s experience.</p><h4>Expense management</h4><p>Keep track of client expenditure to ensure swift processing of payments. Get instant notifications about pending payments and minimise the loss in your business.</p>', NULL, NULL, '2022-08-08 20:40:19', '2022-08-08 20:40:19');
+INSERT INTO `posts` VALUES (119, 'solutions', 'section_9', 'Send Notification', NULL, 'Send Notification', '<p>Seamlessly send notifications and appointment reminders to employees and clients respectively. This will help your business improve staff productivity.</p><figure class=\"image\"><img src=\"http://local.mennr.com/upload/images/send-notification.png\"></figure><h4>Send staff notification</h4><p>Send out an email to your employees at the start of each day. Include the daily appointment schedule and changes, if any. MioSalon notifications and reminders will ensure they never miss an appointment.</p><h4>Send appointment reminders</h4><p>Reduce your salon no-show rate by sending automated text and email confirmations. You can also send for two-way SMS confirmations.</p><h4>Birthday and anniversary greetings</h4><p>Never miss a client’s birthday or anniversary. Get notified and send them exclusive offers on their special day.</p><h4>E-invoices</h4><p>Opt for a paperless approach, and send invoices to clients via email and SMS. Send rebooking reminders to get clients to walk back through the doors of your business.</p>', NULL, NULL, '2022-08-08 20:42:47', '2022-08-08 20:42:47');
+INSERT INTO `posts` VALUES (120, 'solutions', 'section_10', 'Manage Multi-Location', NULL, 'Manage Multi-Location', '<p>Manage one or more salon locations easily within a few clicks. Do all this and more with real-time access to data.</p><figure class=\"image\"><img src=\"http://local.mennr.com/upload/images/manage-multi-location.png\"></figure><h4>Manage locations on the go</h4><p>Manage your salon or spa anytime, anywhere by using it on your tablet, PC, laptop or mobile device.</p><h4>Analyse inventory across multiple locations</h4><p>Easily track inventory across multiple locations and ensure the availability of products.</p><h4>Consolidated reports</h4><p>Get consolidated sales and revenue of each outlet in one central location.</p><h4>Centralised membership</h4><p>Manage client memberships centrally and share customer data across all centres seamlessly so that clients can avail the requested services with ease.</p><h4>Stock transfers</h4><p>Synchronise inter-branch products and stock transfers.</p>', NULL, NULL, '2022-08-08 20:44:39', '2022-08-08 20:44:39');
+INSERT INTO `posts` VALUES (121, 'solutions', 'section_11', 'Sell Online', NULL, 'Sell Online', '<p>Boost the profitability of your business by selling gift vouchers in-store and online.</p><figure class=\"image\"><img src=\"http://local.mennr.com/upload/images/sell-online.png\"></figure><h4>Sell gift cards on third-party websites</h4><p>Put your gift cards where clients spend most of their time – Amazon, Flipkart, Groupon etc.</p>', NULL, NULL, '2022-08-08 20:58:58', '2022-08-08 20:58:58');
+INSERT INTO `posts` VALUES (122, 'solutions', 'section_12', 'Business Intelligence', NULL, 'Business Intelligence', '<p>Don’t wait until the end of the year to see how your business is doing. MioSalon’s dashboard shows how your business is tracking overall.</p><figure class=\"image\"><img src=\"http://local.mennr.com/upload/images/business-Intelligence.png\"></figure><h4>Get weekly/monthly reports</h4><p>Download individual reports to get detailed insights on important metrics like the staff and employee performance.</p><h4>Stronger and weaker metrics</h4><p>The salon software actively demonstrates sale volumes to you so that you can analyse stronger and weaker metrics and define your marketing strategy accordingly.</p><h4>Set goals and track your success</h4><p>Set retail, service and performance goals for your employees. Check recent staff activity and decide where your staff is succeeding and where they can improve.</p><h4>One single report</h4><p>Say goodbye to multiple reports and spreadsheets. Say hello to a single report to review business goals and progress.</p>', NULL, NULL, '2022-08-08 20:59:57', '2022-08-08 20:59:57');
+INSERT INTO `posts` VALUES (123, 'solutions', 'section_13', 'Security', NULL, 'Security', '<p>You can be completely rest assured that your data will be protected against any kind of misuse and malicious activity.</p><figure class=\"image\"><img src=\"http://local.mennr.com/upload/images/security.png\"></figure><h4>Individual logins</h4><p>Your data will remain safe no matter what your location faces. Every employee will be given an individual login and secure password to access the software.</p><h4>SSL/TLS security enabled</h4><p>All communications with our servers are encrypted with SSL (Secure Sockets Layer)/TLS (Transport Layer Security).</p><h4>OTP verification</h4><p>OTP verification for redemption of gift vouchers, prepaid payments and appointment booking.</p><h4>Unauthorised use alerts</h4><p>Get notifications and text alerts for unauthorized use or download.</p>', NULL, NULL, '2022-08-08 21:00:55', '2022-08-08 21:00:55');
+INSERT INTO `posts` VALUES (124, 'solutions', 'section_14', 'Integrations', NULL, 'Integrations', '<p>Powerful integration with the ecosystem such as Facebook, QuickBooks, etc. to make life easier for you.</p><figure class=\"image\"><img src=\"http://local.mennr.com/upload/images/Integration.png\"></figure><h4>Facebook</h4><p>Online booking made easy by adding the booking widget to your Facebook business page. It automatically reflects in your MioSalon calendar.</p><h4>Mailchimp</h4><p>Create and send targeted email campaigns by syncing your client database from MioSalon to MailChimp.</p><h4>Stripe</h4><p>Receive payments for purchases from customers 24X7 by syncing your MioSalon booking widget with Stripe payment gateway.</p><h4>Razorpay</h4><p>Let your customers take appointments and make purchases anytime, anywhere! All you have to do is integrate MioSalon with Razor payment gateway.</p><h4>Google Calendar</h4><p>MioSalon automatically syncs the appointment with customer\'s Google calendar, so the customer gets complete control of their schedule on their smart phone and be reminded automatically from Google.</p><h4>QuickBooks</h4><p>Manage your expenses and cash flow by importing all your sales transactions and taxes into QuickBooks online accounting software.</p><h4>Card Connect</h4><p>Integrated Credit Card processing makes your POS complete. EVM supported.</p><h4>SMS Integrations</h4><p>Send your clients unlimited SMS reminders and marketing messages by creating your own SMS gateway account and integrating it with MioSalon.</p>', NULL, NULL, '2022-08-08 21:02:36', '2022-08-08 21:02:36');
+INSERT INTO `posts` VALUES (125, 'pricing', 'section_2', 'Intercom', NULL, 'cost', '<p>Live chat and Marketing Automation<br><strong>$119</strong>/month<br>Cost for 1000 Profiles</p>', NULL, NULL, '2022-08-11 17:37:07', '2022-08-11 17:42:15');
+INSERT INTO `posts` VALUES (126, 'pricing', 'section_2', 'MixPanel', NULL, 'cost', '<p>User Analytics<br><strong>$25</strong>/month</p>', NULL, NULL, '2022-08-11 17:43:42', '2022-08-11 17:43:42');
+INSERT INTO `posts` VALUES (127, 'pricing', 'section_2', 'Hubspot', NULL, 'cost', '<p>Forms &amp; Lead Capture<br><strong>$50</strong>/month</p>', NULL, NULL, '2022-08-11 17:44:35', '2022-08-11 17:44:35');
+INSERT INTO `posts` VALUES (128, 'pricing', 'section_2', 'Google Analytics', NULL, 'cost', '<p>Web Analytics<br><strong>$ Your Sanity</strong></p>', NULL, NULL, '2022-08-11 17:45:17', '2022-08-11 17:45:17');
+INSERT INTO `posts` VALUES (129, 'pricing', 'section_2', '$194/month', NULL, 'total_pricing', '<p><strong>For a team of 5</strong></p>', NULL, NULL, '2022-08-11 17:46:22', '2022-08-11 17:46:22');
+INSERT INTO `posts` VALUES (130, 'pricing', 'section_2', '$289/month', NULL, 'total_pricing', '<p>For a team of 10</p>', NULL, NULL, '2022-08-11 17:47:13', '2022-08-11 17:47:13');
+INSERT INTO `posts` VALUES (131, 'pricing', 'section_2', '$669/month', NULL, 'total_pricing', '<p><strong>For a team of 25</strong></p>', NULL, NULL, '2022-08-11 17:47:43', '2022-08-11 17:47:43');
+INSERT INTO `posts` VALUES (132, 'pricing', 'section_3', '$119 per month', 'Cost for 1000 Profiles', 'cost_logo', NULL, '11082022166024027931.png', NULL, '2022-08-11 17:51:19', '2022-08-11 17:52:11');
+INSERT INTO `posts` VALUES (133, 'pricing', 'section_3', 'Unlimited Integrations', 'Live chat and Marketing Automation', 'cost_for', NULL, NULL, NULL, '2022-08-11 17:53:40', '2022-08-11 17:53:40');
+INSERT INTO `posts` VALUES (134, 'pricing', 'section_3', 'Unlimited Active Models', 'Live chat and Marketing Automation', 'cost_for', NULL, NULL, NULL, '2022-08-11 17:54:17', '2022-08-11 17:54:17');
+INSERT INTO `posts` VALUES (135, 'pricing', 'section_3', 'Unlimited Lookback', 'Live chat and Marketing Automation', 'cost_for', NULL, NULL, NULL, '2022-08-11 17:54:44', '2022-08-11 17:54:44');
+INSERT INTO `posts` VALUES (136, 'pricing', 'section_3', 'Real-time Data Refresh', 'Live chat and Marketing Automation', 'cost_for', NULL, NULL, NULL, '2022-08-11 17:55:02', '2022-08-11 17:55:02');
+INSERT INTO `posts` VALUES (137, 'pricing', 'section_3', 'Priority Support SLA', 'Live chat and Marketing Automation', 'cost_for', NULL, NULL, NULL, '2022-08-11 17:55:28', '2022-08-11 17:55:28');
+INSERT INTO `posts` VALUES (138, 'pricing', 'section_3', 'Community Access', 'Live chat and Marketing Automation', 'cost_for', NULL, NULL, NULL, '2022-08-11 17:55:47', '2022-08-11 17:55:47');
+INSERT INTO `posts` VALUES (139, 'pricing', 'section_3', 'Dedicated CSM', 'Live chat and Marketing Automation', 'cost_for', NULL, NULL, NULL, '2022-08-11 17:56:12', '2022-08-11 17:56:12');
+INSERT INTO `posts` VALUES (140, 'pricing', 'section_3', 'Premium Integrations', 'Live chat and Marketing Automation', 'cost_for', NULL, NULL, NULL, '2022-08-11 17:56:34', '2022-08-11 17:56:34');
+INSERT INTO `posts` VALUES (145, 'pricing', 'section_3', '$79/month', NULL, 'team_cost', '<p>For your whole team</p>', NULL, NULL, '2022-08-12 01:21:16', '2022-08-12 01:21:16');
+COMMIT;
+
+-- ----------------------------
+-- Table structure for pricing
+-- ----------------------------
+DROP TABLE IF EXISTS `pricing`;
+CREATE TABLE `pricing` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `period` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of pricing
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
+-- Table structure for social_media
+-- ----------------------------
+DROP TABLE IF EXISTS `social_media`;
+CREATE TABLE `social_media` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of social_media
+-- ----------------------------
+BEGIN;
 COMMIT;
 
 -- ----------------------------
@@ -580,11 +729,34 @@ CREATE TABLE `testimonials` (
 -- Records of testimonials
 -- ----------------------------
 BEGIN;
-INSERT INTO `testimonials` VALUES (1, 'Appointment and Booking', 'Jonathon Levi', 'Owner', 'Jonny Levi Studios', '02082022165945324175.png', '02082022165945324135.png', '<p>Customers come to Jonny Levi Studio for a magical experience that leaves them feeling and looking radiant. <strong>Our technology partner needed to do the same. We chose </strong><a href=\"http://www.zonit.com\"><i><strong>Zenoti</strong></i></a><strong> to ensure that the avant-garde customer experience starts well before they enter our salon. </strong>With Zenoti, we’ve eliminated the friction of booking, checking in and out, paying and more.</p>', '2022-08-02 15:14:01', '2022-08-02 21:02:56');
+INSERT INTO `testimonials` VALUES (1, 'Appointment and Booking', 'Jonathon Levi', 'Owner', 'Jonny Levi Studios', '02082022165945324175.png', '02082022165945324135.png', '<p>Customers come to Jonny Levi Studio for a magical experience that leaves them feeling and looking radiant. <strong>Our technology partner needed to do the same. We chose </strong><a href=\"http://www.zonit.com\"><i><strong>Zenoti</strong></i></a><strong> to ensure that the avant-garde customer experience starts well before they enter our salon. </strong>With Zenoti, we’ve eliminated the friction of booking, checking in and out, paying and more.</p>', '2022-08-02 15:14:01', '2022-08-08 02:41:09');
 INSERT INTO `testimonials` VALUES (2, 'home', 'Mike Taylor', 'Web Designer', NULL, '02082022165946071049.png', NULL, 'Wise busy past both park when an ye no. Nay likely her length sooner thrown sex lively income. The expense windows . Blessing welcomed ladyship.', '2022-08-02 17:18:30', '2022-08-02 17:18:30');
 INSERT INTO `testimonials` VALUES (3, 'home', 'Chris Peter', 'Product Manager', NULL, '0208202216594607679.png', NULL, 'Wise busy past both park when an ye no. Nay likely her length sooner thrown sex lively income. The expense windows . Blessing welcomed ladyship.', '2022-08-02 17:19:27', '2022-08-02 17:19:27');
 INSERT INTO `testimonials` VALUES (4, 'home', 'Jonathon Levi', 'Owner', NULL, '02082022165946081993.png', NULL, 'Wise busy past both park when an ye no. Nay likely her length sooner thrown sex lively income. The expense windows . Blessing welcomed ladyship.', '2022-08-02 17:20:19', '2022-08-02 17:20:19');
 INSERT INTO `testimonials` VALUES (5, 'Billing and Payments', 'Carol Morgan', 'COO', 'Cosmetic Skin Therapies', '03082022165948586886.png', '0308202216594858689.png', '<p>The power of the mobile app is almost like it’s been tailor-made for our business… the fact that business owners/service providers can go into a treatment room, take the iPad with them, do everything they need to do, including payment… is a godsend to our franchisees.</p>', '2022-08-03 00:17:48', '2022-08-03 00:17:48');
+COMMIT;
+
+-- ----------------------------
+-- Table structure for user_plans
+-- ----------------------------
+DROP TABLE IF EXISTS `user_plans`;
+CREATE TABLE `user_plans` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint unsigned NOT NULL,
+  `plan_id` bigint unsigned NOT NULL,
+  `previous_plan` bigint unsigned NOT NULL,
+  `last_payment` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci,
+  `other_data` longtext COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ----------------------------
+-- Records of user_plans
+-- ----------------------------
+BEGIN;
 COMMIT;
 
 -- ----------------------------
@@ -599,6 +771,9 @@ CREATE TABLE `users` (
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `company` text COLLATE utf8mb4_unicode_ci,
   `location` text COLLATE utf8mb4_unicode_ci,
+  `locations_count` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `employees_count` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `business_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `mobile` text COLLATE utf8mb4_unicode_ci,
   `stripe_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `pm_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -611,12 +786,14 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`),
   KEY `users_stripe_id_index` (`stripe_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
 BEGIN;
+INSERT INTO `users` VALUES (1, 'Kai Akira', 'kai@mennr.com', NULL, '$2y$10$5rLWICEx9Z26.ofzVxMIce/JM2cuEh3xdz6H4wuLaRR/QjyBQZA9O', 'Mennr', NULL, NULL, '100-500', 'private', '16144524242', NULL, NULL, NULL, NULL, NULL, 2, '2022-08-12 19:00:13', '2022-08-12 19:00:13');
+INSERT INTO `users` VALUES (2, 'Luca Ven', 'luca@mennr.com', NULL, '$2y$10$VPK3X/21aGxb3dPY6ZnvHOeqRvjJrMfXDAoSYFpLl0cQ3JObXpMvu', 'Mennr', NULL, NULL, '100-500', 'private', '16144524242', NULL, NULL, NULL, NULL, NULL, 2, '2022-08-12 21:45:13', '2022-08-12 21:45:13');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
